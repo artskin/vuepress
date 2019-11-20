@@ -13,9 +13,38 @@ $codeBgColor = #282c34 // 代码背景颜色
 .navbar .site-name,.navbar a{
     //color: #fff;   
 }
-.navbar .links{
-    background-color: transparent;
+.navbar{
+	.links{
+		background-color: transparent;
+	}
+	a:hover{
+		//color: rgba(255,255,255,.8)
+	}
 }
-.navbar a:hover{
-    //color: rgba(255,255,255,.8)
+@media screen and (max-width: 719px) {
+.navbar{
+	height:2.8rem;
+	line-height: 1.6rem;
+	font-size:1rem;
+	.sidebar-button {
+		display: block;
+		width: 1rem;
+		height: 1rem;
+		top: .3rem;
+		eft: .5rem;
+		.icon{
+			width: 1rem;
+			height: 1rem;
+		}
+	}
+	
+	.links{
+		background-color: transparent;
+		top: .4rem;
+	}
+	.site-name{
+		
+	}
+}
+	
 }
