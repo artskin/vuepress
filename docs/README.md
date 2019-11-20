@@ -2,4 +2,4 @@
 
 ## Sensetime
 
-## [学习资料]（./notes/）
+## [学习资料]（"/notes/"）
