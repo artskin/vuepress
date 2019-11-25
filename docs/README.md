@@ -4,6 +4,8 @@
 
 ## 各类DEMO实例展示
 
+- js在线调试[Demo](https://artskin.github.io/jsCase/index.html)
+
 - 邮件签名→[Demo](https://artskin.github.io/jsCase/mail_sign.html)
 
 - 仿探探左滑右滑→[Demo](https://artskin.github.io/jsCase/tantan.slide.html)
