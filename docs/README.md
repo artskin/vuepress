@@ -4,19 +4,19 @@
 
 ## 各类DEMO实例展示
 
-- js在线调试[Demo](https://artskin.github.io/jsCase/index.html)
+- js在线调试 → [Demo](https://artskin.github.io/jsCase/index.html)
 
-- 邮件签名→[Demo](https://artskin.github.io/jsCase/mail_sign.html)
+- 邮件签名 → [Demo](https://artskin.github.io/jsCase/mail_sign.html)
 
-- 仿探探左滑右滑→[Demo](https://artskin.github.io/jsCase/tantan.slide.html)
+- 仿探探左滑右滑 → [Demo](https://artskin.github.io/jsCase/tantan.slide.html)
 
-- Canvas 绘图→[Demo](https://artskin.github.io/jsCase/canvas.html)
+- Canvas 绘图 → [Demo](https://artskin.github.io/jsCase/canvas.html)
 
-- Flex 布局实验→[Demo](https://artskin.github.io/jsCase/flex-layout.html)
+- Flex 布局实验 → [Demo](https://artskin.github.io/jsCase/flex-layout.html)
 
-- css 伪类测试→[Demo](https://artskin.github.io/jsCase/pseudo.classes.html)
+- css 伪类测试 → [Demo](https://artskin.github.io/jsCase/pseudo.classes.html)
 
-- 常见面试题解答→[Demo](https://artskin.github.io/jsCase/interview.html)
+- 常见面试题解答 → [Demo](https://artskin.github.io/jsCase/interview.html)
 
 
 ## [快速入口]
