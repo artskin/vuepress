@@ -4,7 +4,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "vuepress dev docs --port $PORT",
+    "dev": "vuepress dev docs --port 2000",
     "build": "vuepress build docs"
   },
   "devDependencies": {

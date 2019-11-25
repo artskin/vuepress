@@ -1,14 +1,23 @@
-# 备忘录!
+# 简介
+> 记录常用知识点，新技术试验场，编写小Demo，随手记
 
-## git常用命令
-```bash
-//强制更新到远程分支版本
-git fetch --all && git reset --hard origin/v1.0.0 && git pull
 
-```
+## 各类DEMO实例展示
 
-## [学习资料](/notes/)
+- 邮件签名→[Demo](https://artskin.github.io/jsCase/mail_sign.html)
 
-## 实例DEMO展示
+- 仿探探左滑右滑→[Demo](https://artskin.github.io/jsCase/tantan.slide.html)
 
-- [仿探探左滑右滑](https://artskin.github.io/jsCase/tantan.slide.html)
+- Canvas 绘图→[Demo](https://artskin.github.io/jsCase/canvas.html)
+
+- Flex 布局实验→[Demo](https://artskin.github.io/jsCase/flex-layout.html)
+
+- css 伪类测试→[Demo](https://artskin.github.io/jsCase/pseudo.classes.html)
+
+- 常见面试题解答→[Demo](https://artskin.github.io/jsCase/interview.html)
+
+
+## [快速入口]
+
+[Git命令](/git/) | 
+[常用笔记](/notes/) 
