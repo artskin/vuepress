@@ -1,6 +1,6 @@
 module.exports = {
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/public/favicon.ico' }]
   ],
   title: "前端笔记",
   description: "阿沐的学习资料整理，Document library",
