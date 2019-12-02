@@ -1,4 +1,82 @@
-$accentColor = #3eaf7c // 主题色
-$textColor = #2c3e50 // 文字颜色
-$borderColor = #eaecef // 边框颜色
-$codeBgColor = #282c34 // 代码背景颜色
+
+.navbar {
+  /* 特定页面的 CSS */
+  //background: #e2e0e2;
+    background-image: -moz-linear-gradient(top, #e8e6e8, #d3d1d3); /* Firefox */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e8e6e8), color-stop(1, #d3d1d3)); /* Saf4+, Chrome */
+    border-bottom: 1px solid #e3e3e4;
+}
+.navbar .site-name,.navbar a{
+    //color: #fff;   
+}
+.navbar{
+	.links{
+		background-color: transparent;
+	}
+	a:hover{
+		//color: rgba(255,255,255,.8)
+	}
+}
+@media (max-width: 719px) {
+	.navbar{
+		height:2.8rem;
+		line-height: 1.4rem;
+		background:#fff;
+		box-shadow: 0 0 5px rgba(0,0,0,0.2);
+		width: 100%;
+		.sidebar-button {
+			display: block;
+			width: 1rem;
+			height: 1rem;
+			top: .3rem;
+			left: .5rem;
+			.icon{
+				width: 1rem;
+				height: 1rem;
+			}
+		}
+		
+		.links{
+			background-color: transparent;
+			position: absolute;
+			top: .3rem;
+			font-size: .92rem;
+			right :0.7rem;
+			padding-left: 0;
+		}
+		.site-name{
+			font-size:.9rem;
+		}
+		.search-box{
+			input{
+				left: 0;
+				&:focus{
+					left: 0;
+				}
+			}
+		}
+	}
+	.sidebar {
+		top: 2.8rem;
+		padding-top: 0;
+		box-shadow: 0 10px 10px rgba(0,0,0,.1);
+		z-index 20;
+		transform: translateX(-115%);
+	}
+	.sidebar-mask{
+	background: rgba(0,0,0,.1)
+	}
+}
+@media (max-width: 419px) {
+	.content:not(.custom){
+		padding: .8rem;
+	}
+	.content div[class*="language-"]{
+		margin: 0.85rem -.4rem;
+		border-radius: 3px;
+	}
+	div[class*="language-"] pre, 
+	div[class*="language-"] pre[class*="language-"]{
+		background-color: #093444
+	}
+}
