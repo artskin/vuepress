@@ -1,16 +1,16 @@
 ---
 home: true
 lang: zh-CN
-heroText: A  Personal Blog
-heroImage: /logo.jpg
+heroText: A  Personal Note
+heroImage: /assets/images/user.jpg
 actionText: 开始 →
-actionLink: /interview/
+actionLink: /demos.html
 features:
-- title: A Blog
-  details: 专注写作前端博客，记录日常所得。
-- title: For Me
-  details: 故九万里，则风斯在下矣，而后乃今培风；背负青天，而莫之夭阏者，而后乃今将图南。
-- title: For Interview
-  details: 广州，已入坑ღ( ´･ᴗ･` )比心
-footer: Copyright © 2019-present Wangtunan
+- title: Note
+  details: 前端笔记，记录日常所得。
+- title: Motto
+  details: 世上哪儿有什么岁月静好，不过是有人在替你负重前行。
+- title: For me
+  details: 前端开发@沪
+footer: Copyright © 2019-present amu
 ---
