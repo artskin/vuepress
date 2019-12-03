@@ -1,7 +1,7 @@
 ---
 home: true
 lang: zh-CN
-heroText: A  Personal Note
+heroText: A NoteBook
 heroImage: /assets/images/user.jpg
 actionText: 开始 →
 actionLink: /demos.html
