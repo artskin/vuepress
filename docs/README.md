@@ -1,25 +1,16 @@
-# 简介
-> 记录常用知识点，新技术试验场，编写小Demo，随手记
-
-
-## 各类DEMO实例展示
-
-- js在线调试 → [Demo](https://artskin.github.io/jsCase/index.html)
-
-- 邮件签名 → [Demo](https://artskin.github.io/jsCase/mail_sign.html)
-
-- 仿探探左滑右滑 → [Demo](https://artskin.github.io/jsCase/tantan.slide.html)
-
-- Canvas 绘图 → [Demo](https://artskin.github.io/jsCase/canvas.html)
-
-- Flex 布局实验 → [Demo](https://artskin.github.io/jsCase/flex-layout.html)
-
-- css 伪类测试 → [Demo](https://artskin.github.io/jsCase/pseudo.classes.html)
-
-- 常见面试题解答 → [Demo](https://artskin.github.io/jsCase/interview.html)
-
-
-## [快速入口]
-
-[linux命令](/git/) | 
-[常用笔记](/notes/) 
+---
+home: true
+lang: zh-CN
+heroText: A  Personal Blog
+heroImage: /logo.jpg
+actionText: 开始 →
+actionLink: /interview/
+features:
+- title: A Blog
+  details: 专注写作前端博客，记录日常所得。
+- title: For Me
+  details: 故九万里，则风斯在下矣，而后乃今培风；背负青天，而莫之夭阏者，而后乃今将图南。
+- title: For Interview
+  details: 广州，已入坑ღ( ´･ᴗ･` )比心
+footer: Copyright © 2019-present Wangtunan
+---
