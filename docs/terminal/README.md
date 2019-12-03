@@ -1,13 +1,15 @@
-# git常用命令
+# 终端常用命令
 
+## git 强制更新
 ```bash
 # 强制更新到远程分支版本
 git fetch --all && git reset --hard origin/v1.0.0 && git pull
 
 ```
 
-## 设置zsh为默认shell
+## Linux(ubuntu)设置默认shell
 ```bash
+# 设置zsh默认
 chsh -s /bin/zsh
 # 恢复bash
 chsh -s /bin/bash  

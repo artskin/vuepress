@@ -1,3 +1,10 @@
+---
+title: DEMO实例展示
+lang : en
+date: 2013/7/13 20:46:25
+slug: home
+---
+<!-- more -->
 
 # 简介
 > 记录常用知识点，新技术试验场，编写小Demo，随手记
@@ -20,7 +27,7 @@
 - 常见面试题解答 → [Demo](https://artskin.github.io/jsCase/interview.html)
 
 
-## [快速入口]
+## 快速入口
 
 [linux命令](/terminal/) | 
 [常用笔记](/notes/) 

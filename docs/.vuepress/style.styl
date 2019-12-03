@@ -8,11 +8,6 @@
     //background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e8e6e8), color-stop(1, #d3d1d3));
     border-bottom: none;
 	box-shadow: 0 0 5px rgba(0,0,0,0.2);
-}
-.navbar .site-name,.navbar a{
-    //color: #fff;   
-}
-.navbar{
 	.links{
 		background-color: transparent;
 	}
@@ -20,6 +15,22 @@
 		//color: rgba(255,255,255,.8)
 	}
 }
+div[class*="language-"]{}
+div[class*="language-"].line-numbers-mode{
+	&::after,
+	.line-numbers-wrapper{
+		width: 2.5rem;
+	}
+	&::after{
+		background-color: #094050;
+	}
+	pre{
+		padding-left: 3.5rem;
+		background-color:#093444
+	}
+} 
+
+
 @media (max-width: 719px) {
 	.navbar{
 		height:2.8rem;
@@ -80,8 +91,19 @@
 		margin: 0.85rem -.4rem;
 		border-radius: 3px;
 	}
-	div[class*="language-"] pre, 
-	div[class*="language-"] pre[class*="language-"]{
-		background-color: #093444
-	}
+}
+
+//scrollbar style
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: rgba(200,200,215,.3); /* or add it to the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0b6182;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-corner{
+  background-color: transparent; /* or add it to the track */
 }
