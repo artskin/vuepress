@@ -22,6 +22,6 @@
 
 ## [快速入口]
 
-[linux命令](/git/) | 
+[linux命令](/terminal/) | 
 [常用笔记](/notes/) 
 
