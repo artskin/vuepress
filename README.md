@@ -8,7 +8,7 @@ Deploy your own VuePress project with ZEIT Now.
 
 [![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/zeit/now-examples/tree/master/vuepress)
 
-_Live Example: https://vuepress.now-examples.now.sh_
+_Live Example: https://gudong.im
 
 ### How We Created This Example
 
