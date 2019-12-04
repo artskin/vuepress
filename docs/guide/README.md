@@ -1,6 +1,6 @@
-# Vssue Demo
+# vuepress
 
-<Vssue title="Vssue Demo" />
-<ClientOnly>
+<Vssue title="vuepress" />
+<!-- <ClientOnly>
   <Vssue />
-</ClientOnly>
+</ClientOnly> -->
