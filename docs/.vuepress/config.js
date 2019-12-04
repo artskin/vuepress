@@ -27,11 +27,22 @@ module.exports = {
       { text: "Notes", link: "/notes/" },
       { text: "Terminal", link: "/terminal/" },
       { text: "Demos", link: "/demos" },
+      { text: "图博", link: "https://xinyi.tuchong.com/" },
 	    { text: 'Github', link: 'https://github.com/artskin' }
     ],
     sidebar: 'auto',
     sidebarDepth : 1
   },
   dest: "public",
-  
+  plugins: {
+    '@vssue/vuepress-plugin-vssue': {
+      // 设置 `platform` 而不是 `api`
+      platform: 'github',
+      // 其他的 Vssue 配置
+      owner: 'artskin',
+      repo: 'vuepress',
+      clientId: 'be6226886eb40a308a27',
+      clientSecret: 'e0b8c567ae32beb6cf994c064ecc69c0571c9f70',
+    },
+  },
 };

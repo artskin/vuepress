@@ -4,7 +4,7 @@ lang: zh-CN
 heroText: Note Clips
 heroImage: /assets/images/user.jpg
 actionText: 开始 →
-actionLink: /demos.html
+actionLink: /guide/
 features:
 - title: Note
   details: 前端笔记，记录日常所得。
