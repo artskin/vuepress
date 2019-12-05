@@ -114,6 +114,40 @@ div[class*="language-"].line-numbers-mode{
 ::-webkit-scrollbar-corner{
   background-color: transparent; /* or add it to the track */
 }
-.vssue .vssue-header .vssue-header-powered-by{
-	display: none
-}
+
+.vssue{
+	padding:0;
+	.vssue-header .vssue-header-powered-by{
+		display: none
+	}
+	.vssue-pagination {
+		flex-direction:row;
+		.vssue-pagination-page{
+			margin: 0
+		}
+	}
+	.vssue-comments{
+		.vssue-comment{
+			position :relative;
+			.vssue-comment-avatar{
+				position: absolute;
+				height :32px;
+				left 5px;
+				top :5px;
+				img {
+					height: 100%;
+					width: 32px;
+					border-radius: 20px;
+				}
+			}
+			.vssue-comment-body{
+				margin: 0;
+				.vssue-comment-header{
+					.vssue-comment-author{
+						padding-left: 30px;
+					}
+				}
+			}
+		}	
+	}
+} 
