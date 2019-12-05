@@ -1,4 +1,4 @@
-
+//@import '~vssue/src/styles/index';
 .navbar {
   /* 特定页面的 CSS */
   //background: #e2e0e2;
@@ -32,45 +32,48 @@ div[class*="language-"].line-numbers-mode{
 
 
 @media (max-width: 719px) {
-	.navbar{
-		height:2.8rem;
-		line-height: 1.4rem;
-		background:#fff;
-		box-shadow: 0 0 5px rgba(0,0,0,0.2);
-		width: 100%;
-		box-sizing: border-box;
-		.sidebar-button {
-			display: block;
-			width: 1rem;
-			height: 1rem;
-			top: .3rem;
-			left: .5rem;
-			.icon{
+	.theme-container{
+		.navbar{
+			height:2.8rem;
+			line-height: 1.4rem;
+			background:#fff;
+			box-shadow: 0 0 5px rgba(0,0,0,0.2);
+			width: 100%;
+			box-sizing: border-box;
+			.sidebar-button {
+				display: block;
 				width: 1rem;
 				height: 1rem;
+				top: .3rem;
+				left: .5rem;
+				.icon{
+					width: 1rem;
+					height: 1rem;
+				}
 			}
-		}
-		
-		.links{
-			background-color: transparent;
-			position: absolute;
-			top: .3rem;
-			font-size: .92rem;
-			right :0.7rem;
-			padding-left: 0;
-		}
-		.site-name{
-			font-size:.9rem;
-		}
-		.search-box{
-			input{
-				left: 0;
-				&:focus{
+			
+			.links{
+				background-color: transparent;
+				position: absolute;
+				top: .3rem;
+				font-size: .92rem;
+				right :0.7rem;
+				padding-left: 0;
+			}
+			.site-name{
+				font-size:.9rem;
+			}
+			.search-box{
+				input{
 					left: 0;
+					&:focus{
+						left: 0;
+					}
 				}
 			}
 		}
 	}
+	
 	.sidebar {
 		top: 2.8rem;
 		padding-top: 0;
@@ -80,17 +83,21 @@ div[class*="language-"].line-numbers-mode{
 		border: none;
 	}
 	.sidebar-mask{
-	background: rgba(0,0,0,.1)
+		background: rgba(0,0,0,.1)
 	}
+	
 }
 @media (max-width: 419px) {
-	.content:not(.custom){
-		padding: .8rem;
+	.theme-default-content {
+		&:not(.custom){
+			padding: .8rem;
+		}
+		div[class*="language-"]{
+			margin: 0.85rem -.4rem;
+			border-radius: 3px;
+		}
 	}
-	.content div[class*="language-"]{
-		margin: 0.85rem -.4rem;
-		border-radius: 3px;
-	}
+
 }
 
 //scrollbar style
@@ -106,4 +113,7 @@ div[class*="language-"].line-numbers-mode{
 }
 ::-webkit-scrollbar-corner{
   background-color: transparent; /* or add it to the track */
+}
+.vssue .vssue-header .vssue-header-powered-by{
+	display: none
 }

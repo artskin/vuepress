@@ -32,6 +32,8 @@ npm config set registry https://registry.npm.taobao.org
 - [codepen](https://codepen.io/) 在线执行代码
 - [leetcode](https://leetcode-cn.com/) 程序算法练习
 
+- [vuepress主题开发](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html)
+
 ### webpack
 为处理资源管理和分割代码而生，可以包含任何类型的文件。灵活，插件多。
 
@@ -39,4 +41,5 @@ npm config set registry https://registry.npm.taobao.org
 用标准化的格式（es6）来写代码，通过减少死代码尽可能地缩小包体积。
 
 ### parcel
-超快的打包速度，多线程在多核上并发编译，不用任何配置。
+超快的打包速度，多线程在多核上并发编译，不用任何配置。、
+<Vssue title="vuepress" />
