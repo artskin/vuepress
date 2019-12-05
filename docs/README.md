@@ -14,3 +14,5 @@ features:
   details: 前端开发@沪
 footer: Copyright © 2019-present amu
 ---
+
+<Vssue title="vuepress" />

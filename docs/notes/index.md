@@ -42,4 +42,3 @@ npm config set registry https://registry.npm.taobao.org
 
 ### parcel
 超快的打包速度，多线程在多核上并发编译，不用任何配置。、
-<Vssue title="vuepress" />
