@@ -34,6 +34,8 @@ npm config set registry https://registry.npm.taobao.org
 
 - [vuepress主题开发](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html)
 - [zeit: Now 部署node项目](https://zeit.co/dashboard)
+- [md文档运行vue代码配置](http://daxigua.me/vuepress-plugin-demo-block/zh/)
+- [vuepress中使用typescript](https://vuepress.github.io/zh/plugins/typescript/)
 
 ### webpack
 为处理资源管理和分割代码而生，可以包含任何类型的文件。灵活，插件多。

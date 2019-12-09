@@ -10,8 +10,10 @@
   "devDependencies": {
     "@vssue/api-github-v3": "^1.1.2",
     "@vssue/vuepress-plugin-vssue": "^1.2.2",
+    "typescript": "^3.7.3",
     "vuepress": "^1.2.0",
-    "vuepress-plugin-demo-block": "^0.7.2"
+    "vuepress-plugin-demo-block": "^0.7.2",
+    "vuepress-plugin-typescript": "^0.1.0"
   },
   "dependencies": {
     "vssue": "^1.2.2"

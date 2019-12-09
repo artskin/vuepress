@@ -13,9 +13,12 @@ lang: zh-CN
     <p><button @click="doSubmit">提交</button></p>
   </div>
 </template>
-<style>
+<style lang='less' rel="stylesheet/less">
  .box-vue{
-   color:green
+   color:green;
+   button{
+     width:100px;
+   }
  }
 </style>
 <script>
