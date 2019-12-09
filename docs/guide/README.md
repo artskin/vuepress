@@ -1,3 +1,6 @@
+---
+lang: zh-CN
+---
 # vue代码示例
 
 ::: demo
@@ -37,7 +40,7 @@ export default {
 .box-vue { color: red; }
 </style>
 :::
-
+----
 <ClientOnly>
   <Vssue class="myvssue" />
 </ClientOnly>

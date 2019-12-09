@@ -33,6 +33,7 @@ npm config set registry https://registry.npm.taobao.org
 - [leetcode](https://leetcode-cn.com/) 程序算法练习
 
 - [vuepress主题开发](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html)
+- [zeit: Now 部署node项目](https://zeit.co/dashboard)
 
 ### webpack
 为处理资源管理和分割代码而生，可以包含任何类型的文件。灵活，插件多。
