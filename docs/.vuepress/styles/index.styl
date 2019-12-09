@@ -1,3 +1,29 @@
+
+button,input{
+	padding: 5px 10px;
+	border-radius: 2px;
+	font-size: 16px;
+}
+input{
+	border: 1px solid #3eaf7c;
+}
+button{
+	background: #3eaf7c;
+	color: #fff;
+	border: none
+}
+
+
+input::-webkit-input-placeholder, 
+textarea::-webkit-input-placeholder{
+  color: #a8d1be;
+  font-size: 14px;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #666;
+  font-size: 16px;
+}
 //@import '~vssue/src/styles/index';
 .navbar {
   /* 特定页面的 CSS */
@@ -15,21 +41,94 @@
 		//color: rgba(255,255,255,.8)
 	}
 }
-div[class*="language-"]{}
-div[class*="language-"].line-numbers-mode{
-	&::after,
-	.line-numbers-wrapper{
-		width: 2.5rem;
+div[class*="language-"]{
+	
+}
+div[class*="language-"]{
+	border-radius: 4px;
+	&.line-numbers-mode{
+		&::after,
+		.line-numbers-wrapper{
+			width: 2.5rem;
+		}
+		&::after{
+			background-color: #094050;
+		}
+		pre{
+			padding-left: 3rem;
+			background-color:#093444
+		}
 	}
+	
+}
+.vuepress-plugin-demo-block__app{
+	position: relative;
 	&::after{
-		background-color: #094050;
+		content: 'vue demo'
+		position: absolute;
+		font-size: 32px;
+		color: #eee;
+		right :0;
+		transform: rotate(40deg)
+		top: 30px;
 	}
-	pre{
-		padding-left: 3.5rem;
-		background-color:#093444
-	}
-} 
+}
 
+.vuepress-plugin-demo-block__wrapper{
+	.vuepress-plugin-demo-block__code{
+		background-color:transparent
+	}
+	.vuepress-plugin-demo-block__display{
+		padding: 0.8rem 1rem
+	}
+	.vuepress-plugin-demo-block__footer{
+		.vuepress-plugin-demo-block__jsfiddle,
+		.vuepress-plugin-demo-block__codepen{
+			top: 6px;
+		}
+		.vuepress-plugin-demo-block__expand{
+			&::before,
+			&::after{
+				transition: all 0.5s;
+			}
+			&::after{
+				content: "view-source";
+				width: 100px;
+				position: absolute;
+				top :11px;
+				color: #ccc;
+				opacity :0
+			}
+		}
+	}
+	.vuepress-plugin-demo-block__show-link{
+		.vuepress-plugin-demo-block__expand{
+			&::after{
+				content: "hide-source";
+			}
+		}
+	}
+	&:hover{
+		.vuepress-plugin-demo-block__footer{
+			width: 100%;
+			.vuepress-plugin-demo-block__expand{
+				&::before,
+				&::after{
+					margin-left: -42px;
+				}
+				&::after{
+					opacity :1
+				}
+			}
+			&:hover{
+				.vuepress-plugin-demo-block__expand::after{
+					color: #3eaf7c;
+				}
+			}
+		}
+		
+	}
+}
 
 @media (max-width: 719px) {
 	.theme-container{
@@ -87,13 +186,16 @@ div[class*="language-"].line-numbers-mode{
 	}
 	
 }
+div[class*="language-"].line-numbers-mode pre{
+
+}
 @media (max-width: 419px) {
 	.theme-default-content {
 		&:not(.custom){
 			padding: .8rem;
 		}
 		div[class*="language-"]{
-			margin: 0.85rem -.4rem;
+			margin: 0 -.4rem;
 			border-radius: 3px;
 		}
 	}

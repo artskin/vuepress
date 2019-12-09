@@ -1,11 +1,13 @@
-# vuepress
+# vue代码示例
 
 ::: demo
-```vue
+```html
 <template>
   <div class="box-vue">
-    Vue {{ message }}
-    <button @click="doSomething">改变</button>
+    <p><input v-model="userName" placeholder="请输入用户名"></p>
+    <p><input v-model="pwd" type="password" placeholder="请输入密码"></p>
+    <p>用户名是: {{ userName }}<br>密 码 是: {{pwd}}</p>
+    <p><button @click="doSubmit">提交</button></p>
   </div>
 </template>
 <style>
@@ -15,11 +17,18 @@
 </style>
 <script>
 export default {
-  data: () => ({ message: 'Hello World2' }),
+  data: () => ({
+    userName: '',
+    pwd:''
+  }),
   methods:{
-    doSomething(){
-      this.message = new Date();
-      alert("显示时间")
+    doSubmit(){
+      if( this.userName && this.pwd){
+        alert('输入正确')
+      }else{
+        alert('重新输入')
+      }
+      
     }
   }
 }
@@ -29,11 +38,6 @@ export default {
 </style>
 :::
 
-<!-- <Vssue title="vuepress" /> -->
-```javascript
-
-console.log('测试')
-```
 <ClientOnly>
   <Vssue class="myvssue" />
 </ClientOnly>
