@@ -74,61 +74,64 @@ div[class*="language-"]{
 	}
 }
 
-.vuepress-plugin-demo-block__wrapper{
-	.vuepress-plugin-demo-block__code{
-		background-color:transparent
-	}
-	.vuepress-plugin-demo-block__display{
-		padding: 0.8rem 1rem
-	}
-	.vuepress-plugin-demo-block__footer{
-		.vuepress-plugin-demo-block__jsfiddle,
-		.vuepress-plugin-demo-block__codepen{
-			top: 6px;
+.page{
+	.vuepress-plugin-demo-block__wrapper{
+		.vuepress-plugin-demo-block__code{
+			background-color:transparent
 		}
-		.vuepress-plugin-demo-block__expand{
-			&::before,
-			&::after{
-				transition: all 0.5s;
-			}
-			&::after{
-				content: "view-source";
-				width: 100px;
-				position: absolute;
-				top :11px;
-				color: #ccc;
-				opacity :0
-			}
+		.vuepress-plugin-demo-block__display{
+			padding: 0.8rem 1rem
 		}
-	}
-	.vuepress-plugin-demo-block__show-link{
-		.vuepress-plugin-demo-block__expand{
-			&::after{
-				content: "hide-source";
-			}
-		}
-	}
-	&:hover{
 		.vuepress-plugin-demo-block__footer{
-			width: 100%;
+			.vuepress-plugin-demo-block__jsfiddle,
+			.vuepress-plugin-demo-block__codepen{
+				top: 6px;
+			}
 			.vuepress-plugin-demo-block__expand{
 				&::before,
 				&::after{
-					margin-left: -42px;
+					transition: all 0.5s;
 				}
 				&::after{
-					opacity :1
-				}
-			}
-			&:hover{
-				.vuepress-plugin-demo-block__expand::after{
-					color: #3eaf7c;
+					content: "view-source";
+					width: 100px;
+					position: absolute;
+					top :11px;
+					color: #ccc;
+					opacity :0
 				}
 			}
 		}
-		
+		.vuepress-plugin-demo-block__show-link{
+			.vuepress-plugin-demo-block__expand{
+				&::after{
+					content: "hide-source";
+				}
+			}
+		}
+		&:hover{
+			.vuepress-plugin-demo-block__footer{
+				width: 100%;
+				.vuepress-plugin-demo-block__expand{
+					&::before,
+					&::after{
+						margin-left: -42px;
+					}
+					&::after{
+						opacity :1
+					}
+				}
+				&:hover{
+					.vuepress-plugin-demo-block__expand::after{
+						color: #3eaf7c;
+					}
+				}
+			}
+			
+		}
 	}
 }
+
 
 @media (max-width: 719px) {
 	.theme-container{
@@ -186,9 +189,7 @@ div[class*="language-"]{
 	}
 	
 }
-div[class*="language-"].line-numbers-mode pre{
 
-}
 @media (max-width: 419px) {
 	.theme-default-content {
 		&:not(.custom){
@@ -202,21 +203,7 @@ div[class*="language-"].line-numbers-mode pre{
 
 }
 
-//scrollbar style
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-  background-color: rgba(200,200,215,.3); /* or add it to the track */
-}
-
-::-webkit-scrollbar-thumb {
-  background: #0b6182;
-  border-radius: 3px;
-}
-::-webkit-scrollbar-corner{
-  background-color: transparent; /* or add it to the track */
-}
-
+//评论插件样式
 .vssue{
 	padding:0;
 	.vssue-header .vssue-header-powered-by{
@@ -252,4 +239,19 @@ div[class*="language-"].line-numbers-mode pre{
 			}
 		}	
 	}
-} 
+}
+
+//scrollbar style
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: rgba(200,200,215,.3); /* or add it to the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0b6182;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-corner{
+  background-color: transparent; /* or add it to the track */
+}
