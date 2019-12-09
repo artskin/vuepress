@@ -1,7 +1,9 @@
 module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' }]
+    ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js' }],
   ],
   title: "前端笔记",
   description: "Note，Document library",
@@ -44,5 +46,6 @@ module.exports = {
       clientId: 'be6226886eb40a308a27',
       clientSecret: 'e0b8c567ae32beb6cf994c064ecc69c0571c9f70',
     },
+    'demo-block':true
   },
 };
