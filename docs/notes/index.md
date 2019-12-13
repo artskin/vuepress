@@ -38,6 +38,7 @@ npm config set registry https://registry.npm.taobao.org
 - [vuepress中使用typescript](https://vuepress.github.io/zh/plugins/typescript/)
 - [一行代码实现本地https证书校验](https://github.com/FiloSottile/mkcert)
 - [国际化自动替换助手](https://github.com/alibaba/kiwi)
+- [codesandbox:vsCode 在线版](https://codesandbox.io/)
 
 ### webpack
 为处理资源管理和分割代码而生，可以包含任何类型的文件。灵活，插件多。
