@@ -25,3 +25,4 @@ export default {
 <style scoped>
 
 </style>
+<Vssue title="vuepress" />
