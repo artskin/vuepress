@@ -1,23 +1,41 @@
 {
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "declaration": true,
-    "module": "es2015",
-    "newLine": "lf",
-    "noEmitOnError": true,
-    "noImplicitAny": false,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "sourceMap": true,
+    "target": "esnext",
+    "module": "esnext",
     "strict": true,
-    "strictNullChecks": true,
-    "target": "es2015",
-    "include": [
-      "docs/**/*.ts",
-      "docs/**/*.tsx",
-      "docs/**/*.vue",
-      "docs/**/*.ts",
-      "docs/**/*.md"
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch":true,
+    "baseUrl": ".",
+    "noImplicitAny":false,
+    "types": [
+      "node",
+      //"jest",
+      //"webpack-env"
     ],
-  }
+    "paths": {
+      "@/*": [
+        "docs/.vuepress/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  },
+  "include": [
+    "docs/.vuepress/**/*.ts", 
+    "docs/.vuepress/**/*.vue",
+    "docs/.vuepress/**/*.md",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

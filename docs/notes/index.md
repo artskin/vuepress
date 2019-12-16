@@ -36,6 +36,9 @@ npm config set registry https://registry.npm.taobao.org
 - [zeit: Now 部署node项目](https://zeit.co/dashboard)
 - [md文档运行vue代码配置](http://daxigua.me/vuepress-plugin-demo-block/zh/)
 - [vuepress中使用typescript](https://vuepress.github.io/zh/plugins/typescript/)
+- [vuepress博客主题](https://vuepress-theme-reco.recoluan.com/)
+- [vuepress基于默认主题的博客主题](https://github.com/xuzhongpeng/vuepress-theme-reform)
+- [前端进阶面试题](https://muyiy.cn/question/)
 
 ### webpack
 为处理资源管理和分割代码而生，可以包含任何类型的文件。灵活，插件多。

@@ -13,9 +13,14 @@
     "typescript": "^3.7.3",
     "vuepress": "^1.2.0",
     "vuepress-plugin-demo-block": "^0.7.2",
-    "vuepress-plugin-typescript": "^0.1.0"
+    "vuepress-plugin-typescript": "^0.1.1",
+    "vuepress-types": "^0.5.1"
   },
   "dependencies": {
-    "vssue": "^1.2.2"
+    "axios": "^0.19.0",
+    "monaco-editor": "^0.18.1",
+    "monaco-editor-webpack-plugin": "^1.7.0",
+    "vssue": "^1.2.2",
+    "vuepress-theme-reform": "^1.4.0"
   }
 }

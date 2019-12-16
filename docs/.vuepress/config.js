@@ -1,19 +1,23 @@
+const path = require('path');
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
 module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' }],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js' }],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js' }],
-    ['script', { src: 'https://cdn.bootcss.com/less.js/3.10.3/less.min.js' }],
   ],
   title: "前端笔记",
-  description: "Note，Document library",
+  description: "Note,Document library",
   markdown: {
     // 代码显示行号
     lineNumbers: true,
   },
+  enhanceAppFiles: path.resolve(__dirname, './enhanceApp.ts'),
+  //theme:'reform',
   themeConfig: {
     type: "blog",
+    tags:"tags",
     blogConfig: {
       category: {
         location: 2, // 在导航栏菜单中所占的位置，默认2
@@ -30,6 +34,7 @@ module.exports = {
       { text: "Notes", link: "/notes/" },
       { text: "Terminal", link: "/terminal/" },
       { text: "Demos", link: "/demos" },
+      { text: "标签云", link: "/tags/",tags:true },
       { text: "图博", link: "https://xinyi.tuchong.com/" },
 	    { text: 'Github', link: 'https://github.com/artskin' }
     ],
@@ -48,10 +53,18 @@ module.exports = {
       clientSecret: 'e0b8c567ae32beb6cf994c064ecc69c0571c9f70',
     },
     'demo-block':true,
+    'vuepress-plugin-typescript':true,
     'typescript':{
       tsLoaderOptions: {
         // ts-loader 的所有配置项
       },
-    }
+    },
+    axios:true
+  
   },
+  configureWebpack: {
+    plugins: [
+      new MonacoWebpackPlugin()
+    ]
+  }
 };

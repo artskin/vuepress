@@ -1,5 +1,6 @@
 ---
 home: true
+defaultHome: true
 lang: zh-CN
 heroText: Note Clips
 heroImage: /assets/images/user.jpg
