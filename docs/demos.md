@@ -25,6 +25,8 @@ slug: home
 - css 伪类测试 → [Demo](https://artskin.github.io/jsCase/pseudo.classes.html)
 
 - 常见面试题解答 → [Demo](https://artskin.github.io/jsCase/interview.html)
+- 人脸识别 → [Demo](/face-recognition.html)
+- 雷达扫描 → [Demo](/radar.html)
 
 
 ## 快速入口
