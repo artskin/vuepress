@@ -16,7 +16,7 @@ slug: home
             正在扫描...
           </div>
         </div>
-        <img src="/assets/images/head.gif" alt="face" />
+        <img src="/assets/images/head.gif?v=2" alt="face" />
         <canvas class="mona" width="200" height="200"></canvas>
       </div>
       <div class="radar-border"></div>
