@@ -13,12 +13,12 @@ slug: home
       <div class="circle">
         <div class="circle-inner">
           <div class="circle-scan">
-            <img src="/assets/images/head.gif" alt="face" />
+            正在扫描...
           </div>
         </div>
-        
+        <img src="/assets/images/head.gif" alt="face" />
+        <canvas class="mona" width="200" height="200"></canvas>
       </div>
-      
       <div class="radar-border"></div>
     </div>
   </div>
@@ -83,14 +83,11 @@ slug: home
 .circle {
   width:100%;
   height:100%;
-  position: absolute;
+  position: relative;
   color:#62d7eb;
   border: 1px solid #62d7eb;
   /* box-shadow: inset 0 0 0 2px; */
   border-radius: 50%;
-  background: -webkit-linear-gradient(top , transparent 5px, rgba(98,215,235,.6) 6px),
-              -webkit-linear-gradient(left, transparent 5px, rgba(98,215,235,.6) 6px);
-  background-size: 6px 6px;
   z-index:1;
 }
 .circle::before,
@@ -133,6 +130,9 @@ slug: home
   border-radius: 50%;
   position:absolute;
   z-index:0;
+  background: -webkit-linear-gradient(top , transparent 5px, rgba(98,215,235,.6) 6px),
+             -webkit-linear-gradient(left, transparent 5px, rgba(98,215,235,.6) 6px);
+  background-size: 6px 6px;
 }
 .circle-scan{
   position:absolute;
@@ -144,30 +144,14 @@ slug: home
   animation-timing-function: linear;
   animation-delay: 3s;
   background-image: linear-gradient(180deg, rgba(95, 214, 249, 0) 50%, rgba(95, 214, 249, .9) 100%);
-  border-bottom:1px solid rgba(95, 214, 249)
+  border-bottom:1px solid rgba(95, 214, 249);
+  text-align:center;
+  line-height:200px;
 }
-.radar img{width:100%;border-radius: 50%;z-index:-2}
+.circle img{width:100%;border-radius: 50%;z-index:-2}
 .circle-scan:before {
-  /* content: ' ';
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  animation: blips 5s infinite;
-  animation-timing-function: linear;
-  animation-delay: 1.4s; */
 }
 .circle-scan:after {
-  /* content: ' ';
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform-origin: bottom right;
-  border-radius: 50%; */
 }
 
 @keyframes radar-beam {
@@ -178,35 +162,10 @@ slug: home
     max-height:100%;
   }
 }
-/* @keyframes blips {
-  14% {
-    background: radial-gradient(2vmin circle at 75% 70%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%);
-  }
-  14.0002% {
-    background: radial-gradient(2vmin circle at 75% 70%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%), 
-                radial-gradient(2vmin circle at 63% 72%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%);
-  }
-  25% {
-    background: radial-gradient(2vmin circle at 75% 70%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%), 
-                radial-gradient(2vmin circle at 63% 72%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%), 
-                radial-gradient(2vmin circle at 56% 86%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%);
-  }
-  26% {
-    background: radial-gradient(2vmin circle at 75% 70%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%), 
-                radial-gradient(2vmin circle at 63% 72%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%), 
-                radial-gradient(2vmin circle at 56% 86%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%);
-    opacity: 1;
-  }
-  100% {
-    background: radial-gradient(2vmin circle at 75% 70%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%), 
-                radial-gradient(2vmin circle at 63% 72%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%), 
-                radial-gradient(2vmin circle at 56% 86%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%);
-    opacity: 0;
-  }
-} */
 
 </style>
 <script>
+
 export default {
   data: () => ({
     userName: '',
