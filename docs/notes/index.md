@@ -42,6 +42,13 @@ npm config set registry https://registry.npm.taobao.org
 - [一行代码实现本地https证书校验](https://github.com/FiloSottile/mkcert)
 - [国际化自动替换助手](https://github.com/alibaba/kiwi)
 - [codesandbox:vsCode 在线版](https://codesandbox.io/)
+- [FileSaver.js](https://github.com/eligrey/FileSaver.js)
+
+### 粒子动画
+- [按钮点击粒子动画](https://tympanus.net/codrops/2018/04/25/particle-effects-for-buttons/)
+- [基因螺旋粒子](https://github.com/jackrugile/3d-particle-explorations)
+- [threejs](https://github.com/Mamboleoo/DecorativeBackgrounds/)
+- [银河系背景](http://www.htmleaf.com/html5/html5-canvas/201707294656.html)
 
 ### webpack
 为处理资源管理和分割代码而生，可以包含任何类型的文件。灵活，插件多。

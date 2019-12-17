@@ -40,7 +40,29 @@ module.exports = {
 	    { text: 'Github', link: 'https://github.com/artskin' }
     ],
     sidebar: 'auto',
-    sidebarDepth : 1
+    sidebarDepth : 1,
+    gitalk: {
+      // gitalk的主要参数
+      clientID: `2912f33e7eba2ba9f38d`,
+      clientSecret: `9c5cb6059d6118122e70e237179855954df54ee5`,
+      repo: `vuepress`,
+      owner: "artskin",
+      admin: ["artskin"],
+      accessToken: 'your accessToken ',
+      labelRule: `(title,path)=> {
+        let paths=path.split('/')
+        if(paths.length>0){
+          let res = paths.pop()
+          if(res===''){
+            res=paths.pop()
+          }
+          res = res.slice(-50)
+          return res
+        }else{
+          return title
+        }
+      }`
+    },
   },
   dest: "public",
   plugins: {
@@ -53,6 +75,7 @@ module.exports = {
       clientId: 'be6226886eb40a308a27',
       clientSecret: 'e0b8c567ae32beb6cf994c064ecc69c0571c9f70',
     },
+    'gitalk':true,
     'demo-block':true,
     'vuepress-plugin-typescript':true,
     'typescript':{

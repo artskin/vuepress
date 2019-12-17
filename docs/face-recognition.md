@@ -1,0 +1,222 @@
+---
+title: CSS3 人脸识别 扫描效果
+lang : zh=CN
+date: 2019/12/17 14:46:25
+slug: home
+---
+<!-- more -->
+::: demo
+```html
+<template>
+  <div class="demo-bg">
+    <div class="radar">
+      <div class="circle">
+        <div class="circle-inner">
+          <div class="circle-scan">
+            <img src="/assets/images/head.gif" alt="face" />
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="radar-border"></div>
+    </div>
+  </div>
+</template>
+<style>
+.demo-bg{
+    height:300px;
+    background:#090d2c;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.demo-bg:before{
+    content:'';
+    position:absolute;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:0;
+}
+.radar{
+  position:relative;
+  width: 240px;
+  height: 240px;
+  padding:20px;
+}
+.radar:before,
+.radar:after,
+.radar-border:before,
+.radar-border:after{
+    content:'';
+    position:absolute;
+    width:50px;
+    height:50px;
+    border-style:solid;
+    border-color:#54d0e1;
+}
+.radar:before,
+.radar:after{
+  top:0;
+}
+.radar:before{
+    left:0;
+    border-width:2px 0 0 2px;
+}
+.radar:after{
+    right:0;
+    border-width:2px 2px 0 0;
+}
+.radar-border:before,
+.radar-border:after{
+  bottom:0;
+}
+.radar-border:before{
+  left:0;
+  border-width:0 0 2px 2px;
+}
+.radar-border:after{
+  right:0;
+  border-width:0 2px 2px 0;
+}
+.circle {
+  width:100%;
+  height:100%;
+  position: absolute;
+  color:#62d7eb;
+  border: 1px solid #62d7eb;
+  /* box-shadow: inset 0 0 0 2px; */
+  border-radius: 50%;
+  background: -webkit-linear-gradient(top , transparent 5px, rgba(98,215,235,.6) 6px),
+              -webkit-linear-gradient(left, transparent 5px, rgba(98,215,235,.6) 6px);
+  background-size: 6px 6px;
+  z-index:1;
+}
+.circle::before,
+.circle::after {
+    content: '';
+    z-index: 0;
+    margin: -5%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 2px solid #62d7eb;
+    /* box-shadow: inset 0 0 0 2px; */
+    border-radius: 50%;
+    animation: clipMe 20s linear infinite;
+  }
+.circle::before {
+    animation-delay: -10s;
+}
+
+@keyframes clipMe {
+    0%, 100% {
+        clip: rect(0px, 220.0px, 2px, 0px);
+    }
+    25% {
+        clip: rect(0px, 2px, 220.0px, 0px);
+    }
+    50% {
+        clip: rect(218.0px, 220.0px, 220.0px, 0px);
+    }
+    75% {
+        clip: rect(0px, 220.0px, 220.0px, 218.0px);
+    }
+}
+.circle-inner{
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  border-radius: 50%;
+  position:absolute;
+  z-index:0;
+}
+.circle-scan{
+  position:absolute;
+  left:0;
+  width:100%;
+  height:100%;
+  max-height:0%;
+  animation: radar-beam 3s infinite;
+  animation-timing-function: linear;
+  animation-delay: 3s;
+  background-image: linear-gradient(180deg, rgba(95, 214, 249, 0) 50%, rgba(95, 214, 249, .9) 100%);
+  border-bottom:1px solid rgba(95, 214, 249)
+}
+.radar img{width:100%;border-radius: 50%;z-index:-2}
+.circle-scan:before {
+  /* content: ' ';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: blips 5s infinite;
+  animation-timing-function: linear;
+  animation-delay: 1.4s; */
+}
+.circle-scan:after {
+  /* content: ' ';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: bottom right;
+  border-radius: 50%; */
+}
+
+@keyframes radar-beam {
+  0%,60% {
+    max-height:0%;
+  }
+  100% {
+    max-height:100%;
+  }
+}
+/* @keyframes blips {
+  14% {
+    background: radial-gradient(2vmin circle at 75% 70%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%);
+  }
+  14.0002% {
+    background: radial-gradient(2vmin circle at 75% 70%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%), 
+                radial-gradient(2vmin circle at 63% 72%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%);
+  }
+  25% {
+    background: radial-gradient(2vmin circle at 75% 70%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%), 
+                radial-gradient(2vmin circle at 63% 72%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%), 
+                radial-gradient(2vmin circle at 56% 86%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%);
+  }
+  26% {
+    background: radial-gradient(2vmin circle at 75% 70%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%), 
+                radial-gradient(2vmin circle at 63% 72%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%), 
+                radial-gradient(2vmin circle at 56% 86%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%);
+    opacity: 1;
+  }
+  100% {
+    background: radial-gradient(2vmin circle at 75% 70%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%), 
+                radial-gradient(2vmin circle at 63% 72%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%), 
+                radial-gradient(2vmin circle at 56% 86%, #ffffff 10%, #20ff4d 30%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0;
+  }
+} */
+
+</style>
+<script>
+export default {
+  data: () => ({
+    userName: '',
+    pwd:''
+  }),
+  methods:{
+    doSubmit(){
+      
+    }
+  }
+}
+</script>
+:::
