@@ -8,7 +8,7 @@ actionText: 开始 →
 actionLink: /guide/
 features:
 - title: Note
-  details: 前端笔记，记录日常所得。
+  details: 前端笔记，前端代码试验场。
 - title: Motto
   details: 世上哪儿有什么岁月静好，不过是有人在替你负重前行。
 - title: For me

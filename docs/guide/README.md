@@ -15,7 +15,7 @@ tags:
     <p><button @click="doSubmit">提交</button></p>
   </div>
 </template>
-<style lang='less' rel="stylesheet/less">
+<style lang='styl'>
  .box-vue{
    color:green;
    button{
@@ -36,14 +36,10 @@ export default {
       }else{
         alert('重新输入')
       }
-      
     }
   }
 }
 </script>
-<style>
-.box-vue { color: red; }
-</style>
 :::
 ----
 <ClientOnly>

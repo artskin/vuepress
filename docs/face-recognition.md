@@ -1,9 +1,16 @@
 ---
-title: CSS3 人脸识别 扫描效果
 lang : zh=CN
 date: 2019/12/17 14:46:25
 slug: home
 ---
+## CSS3 人脸识别 扫描效果
+## 涉及知识点
+> 纯css 实现
+- css3: background-image
+- css3: animation 动画
+- css3: clip使用
+- css: 伪类
+
 <!-- more -->
 ::: demo
 ```html
@@ -17,165 +24,153 @@ slug: home
           </div>
         </div>
         <img src="/assets/images/head.gif?v=2" alt="face" />
-        <canvas class="mona" width="200" height="200"></canvas>
       </div>
       <div class="radar-border"></div>
     </div>
   </div>
 </template>
 <style>
-.demo-bg{
+  .demo-bg{
     height:300px;
     background:#090d2c;
+    background: #282537;
+    background-image: -webkit-radial-gradient(top, circle cover, #003399 0%, #252233 80%);
+    background-image: -moz-radial-gradient(top, circle cover, #003399 0%, #252233 80%);
+    background-image: -o-radial-gradient(top, circle cover, #003399 0%, #252233 80%);
+    background-image: radial-gradient(top, circle cover, #003399 0%, #252233 80%);
     display:flex;
     justify-content: center;
     align-items:center;
-}
-.demo-bg:before{
+  }
+  .demo-bg:before{
     content:'';
     position:absolute;
     left:0;
     width:100%;
     height:100%;
     z-index:0;
-}
-.radar{
-  position:relative;
-  width: 240px;
-  height: 240px;
-  padding:20px;
-}
-.radar:before,
-.radar:after,
-.radar-border:before,
-.radar-border:after{
+  }
+  .radar{
+    position:relative;
+    width: 240px;
+    height: 240px;
+    padding:20px;
+  }
+  .radar:before,
+  .radar:after,
+  .radar-border:before,
+  .radar-border:after{
     content:'';
     position:absolute;
-    width:50px;
-    height:50px;
+    width:40px;
+    height:40px;
     border-style:solid;
     border-color:#54d0e1;
-}
-.radar:before,
-.radar:after{
-  top:0;
-}
-.radar:before{
+  }
+  .radar:before,
+  .radar:after{
+    top:0;
+  }
+  .radar:before{
     left:0;
     border-width:2px 0 0 2px;
-}
-.radar:after{
+  }
+  .radar:after{
     right:0;
     border-width:2px 2px 0 0;
-}
-.radar-border:before,
-.radar-border:after{
-  bottom:0;
-}
-.radar-border:before{
-  left:0;
-  border-width:0 0 2px 2px;
-}
-.radar-border:after{
-  right:0;
-  border-width:0 2px 2px 0;
-}
-.circle {
-  width:100%;
-  height:100%;
-  position: relative;
-  color:#62d7eb;
-  border: 1px solid #62d7eb;
-  /* box-shadow: inset 0 0 0 2px; */
-  border-radius: 50%;
-  z-index:1;
-}
-.circle::before,
-.circle::after {
-    content: '';
-    z-index: 0;
-    margin: -5%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border: 2px solid #62d7eb;
+  }
+  .radar-border:before,
+  .radar-border:after{
+    bottom:0;
+  }
+  .radar-border:before{
+    left:0;
+    border-width:0 0 2px 2px;
+  }
+  .radar-border:after{
+    right:0;
+    border-width:0 2px 2px 0;
+  }
+  .circle {
+    width:100%;
+    height:100%;
+    position: relative;
+    color:#62d7eb;
+    border: 1px solid #62d7eb;
     /* box-shadow: inset 0 0 0 2px; */
     border-radius: 50%;
-    animation: clipMe 20s linear infinite;
+    z-index:1;
   }
-.circle::before {
+  .circle::before,
+  .circle::after {
+      content: '';
+      z-index: 0;
+      margin: -5%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: 2px solid #62d7eb;
+      /* box-shadow: inset 0 0 0 2px; */
+      border-radius: 50%;
+      animation: clipMe 20s linear infinite;
+    }
+  .circle::before {
     animation-delay: -10s;
-}
+  }
 
-@keyframes clipMe {
+  @keyframes clipMe {
     0%, 100% {
-        clip: rect(0px, 220.0px, 2px, 0px);
+      clip: rect(0px, 220.0px, 2px, 0px);
     }
     25% {
-        clip: rect(0px, 2px, 220.0px, 0px);
+      clip: rect(0px, 2px, 220.0px, 0px);
     }
     50% {
-        clip: rect(218.0px, 220.0px, 220.0px, 0px);
+      clip: rect(218.0px, 220.0px, 220.0px, 0px);
     }
     75% {
-        clip: rect(0px, 220.0px, 220.0px, 218.0px);
+      clip: rect(0px, 220.0px, 220.0px, 218.0px);
     }
-}
-.circle-inner{
-  width:100%;
-  height:100%;
-  overflow: hidden;
-  border-radius: 50%;
-  position:absolute;
-  z-index:0;
-  background: -webkit-linear-gradient(top , transparent 5px, rgba(98,215,235,.6) 6px),
-             -webkit-linear-gradient(left, transparent 5px, rgba(98,215,235,.6) 6px);
-  background-size: 6px 6px;
-}
-.circle-scan{
-  position:absolute;
-  left:0;
-  width:100%;
-  height:100%;
-  max-height:0%;
-  animation: radar-beam 3s infinite;
-  animation-timing-function: linear;
-  animation-delay: 3s;
-  background-image: linear-gradient(180deg, rgba(95, 214, 249, 0) 50%, rgba(95, 214, 249, .9) 100%);
-  border-bottom:1px solid rgba(95, 214, 249);
-  text-align:center;
-  line-height:200px;
-}
-.circle img{width:100%;border-radius: 50%;z-index:-2}
-.circle-scan:before {
-}
-.circle-scan:after {
-}
-
-@keyframes radar-beam {
-  0%,60% {
+  }
+  .circle-inner{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    border-radius: 50%;
+    position:absolute;
+    z-index:0;
+    background-size: 6px 6px;
+    background-image: -webkit-linear-gradient(top , transparent 5px, rgba(98,215,235,.6) 6px),
+                      -webkit-linear-gradient(left, transparent 5px, rgba(98,215,235,.6) 6px);
+  }
+  .circle-scan{
+    position:absolute;
+    left:0;
+    width:100%;
+    height:100%;
     max-height:0%;
+    animation: radarBeam 3s infinite;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    background-image: linear-gradient(180deg, rgba(95, 214, 249, 0) 50%, rgba(95, 214, 249, .9) 100%);
+    border-bottom:1px solid rgba(95, 214, 249);
+    text-align:center;
+    line-height:200px;
   }
-  100% {
-    max-height:100%;
-  }
-}
+  .circle img{width:100%;border-radius: 50%;z-index:-2}
 
+  @keyframes radarBeam {
+    0%,60% {
+      max-height:0%;
+    }
+    100% {
+      max-height:100%;
+    }
+  }
 </style>
 <script>
-
-export default {
-  data: () => ({
-    userName: '',
-    pwd:''
-  }),
-  methods:{
-    doSubmit(){
-      
-    }
-  }
-}
+  export default {}
 </script>
 :::
