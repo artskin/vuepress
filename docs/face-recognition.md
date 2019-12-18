@@ -8,7 +8,7 @@ slug: home
 > 纯css 实现
 - css3: background-image
 - css3: animation 动画
-- css3: clip使用
+- css3: clip-path使用
 - css: 伪类
 
 <!-- more -->
@@ -114,13 +114,22 @@ slug: home
       border: 2px solid #62d7eb;
       /* box-shadow: inset 0 0 0 2px; */
       border-radius: 50%;
-      animation: clipMe 20s linear infinite;
+      animation: clipPath 20s linear infinite;
+      clip-path:polygon(0% 35%, 35% 35%, 35% 0%, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0% 65%);
     }
   .circle::before {
-    animation-delay: -10s;
+    animation-delay: -2.74s;
   }
-
-  @keyframes clipMe {
+  @keyframes clipPath{
+    0%{}
+    50% {
+      transform: rotateZ(200deg);
+    }
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+  @keyframes clipFade {
     0%, 100% {
       clip: rect(0px, 220.0px, 2px, 0px);
     }
@@ -150,7 +159,6 @@ slug: home
     left:0;
     width:100%;
     height:100%;
-    max-height:0%;
     animation: radarBeam 3s infinite;
     animation-timing-function: linear;
     animation-delay: 3s;
@@ -158,14 +166,18 @@ slug: home
     border-bottom:1px solid rgba(95, 214, 249);
     text-align:center;
     line-height:200px;
+    max-height:0%;
+    border-bottom-width:0;
   }
   .circle img{width:100%;border-radius: 50%;z-index:-2}
 
   @keyframes radarBeam {
     0%,60% {
+      border-bottom-width:0;
       max-height:0%;
     }
     100% {
+      border-bottom-width:1px;
       max-height:100%;
     }
   }
