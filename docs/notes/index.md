@@ -50,6 +50,10 @@ npm config set registry https://registry.npm.taobao.org
 - [threejs](https://github.com/Mamboleoo/DecorativeBackgrounds/)
 - [银河系背景](http://www.htmleaf.com/html5/html5-canvas/201707294656.html)
 
+### SVG动画资源
+- [svg 资源集合网站](http://svgtrick.com/)
+- [animejs](https://animejs.com/)
+
 ### webpack
 为处理资源管理和分割代码而生，可以包含任何类型的文件。灵活，插件多。
 

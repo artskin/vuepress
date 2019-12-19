@@ -8,7 +8,7 @@ slug: home
 > 纯css 实现
 - css3: background-image
 - css3: animation 动画
-- css3: clip-path使用
+- css3: clip-path使用 [传送门](https://bennettfeely.com/clippy/)
 - css: 伪类
 
 <!-- more -->
@@ -115,7 +115,8 @@ slug: home
       /* box-shadow: inset 0 0 0 2px; */
       border-radius: 50%;
       animation: clipPath 20s linear infinite;
-      clip-path:polygon(0% 35%, 35% 35%, 35% 0%, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0% 65%);
+      /* clip-path:polygon(0% 35%, 35% 35%, 35% 0%, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0% 65%); */
+      clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
     }
   .circle::before {
     animation-delay: -2.74s;
