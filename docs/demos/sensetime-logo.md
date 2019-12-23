@@ -176,3 +176,5 @@ export default {
 - svg: < linearGradient /> 渐变设置
 - css3 animation 动画，及动画执行事件监控( webkitAnimationStart / webkitAnimationEnd / webkitAnimationIteration)
 - svg + css3:offset-path 自定义路径动画 → [传送门](https://css-tricks.com/)
+
+>其他svg动画库 [vivus.js](http://maxwellito.github.io/vivus/)
