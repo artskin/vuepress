@@ -1,10 +1,10 @@
 ---
-title: SenseTime Logo动画
+title: SenseTime Logo 动画
 lang : zh=CN
 date: 2019/12/23 11:46:25
 slug: home
 ---
-## sensetime Logo 动画
+## SenseTime Logo 动画
 
 ### 涉及知识点
 > css+svg 

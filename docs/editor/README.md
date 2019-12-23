@@ -1,4 +1,10 @@
 
+```md
+# package.json
+"dependencies": {
+  "monaco-editor": "~0.18.1",
+  "monaco-editor-webpack-plugin": "^1.7.0",
+}
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
@@ -25,4 +31,8 @@ export default {
 <style scoped>
 
 </style>
+```
+
+
+
 <Vssue title="vuepress" />
