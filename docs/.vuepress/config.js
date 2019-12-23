@@ -1,5 +1,5 @@
 const path = require('path');
-const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
+//const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
 module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -88,7 +88,7 @@ module.exports = {
   },
   configureWebpack: {
     plugins: [
-      new MonacoWebpackPlugin()
+      //new MonacoWebpackPlugin()
     ]
   }
 };
