@@ -19,7 +19,7 @@ slug: home
 <template>
   <div class="box-infinity">
     <div class="logo-area">
-      <svg title="sense-logo" ref="logo" class="svg-logo" id="logo-layer" width="300" height="150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 205 100">
+      <svg title="sense-logo" ref="logo" class="svg-logo" id="logo-layer" width="300" height="110" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 205 100">
         <defs>
           <linearGradient id="senselinear" x1="40%" y1="0%" x2="80%" y2="100%">
             <stop offset="0%" stop-color="#FD3258"/>
@@ -48,7 +48,7 @@ slug: home
   }
   .sense-logo-path {
     fill: transparent;
-    stroke: #fff url(#senselinear);
+    stroke: url(#senselinear);
     animation: senseLogo 3s ease-in-out forwards;
     /*stroke-dasharray: 5px 20px;*/
   }
@@ -82,7 +82,7 @@ slug: home
       fill: transparent;
     }
     to {
-      fill: #FD3258 url(#senselinear);
+      fill: url(#senselinear);
     }
   }
   .iosFill{
