@@ -33,7 +33,7 @@ module.exports = {
       { text: "Home", link: "/" },
       { text: "Notes", link: "/notes/" },
       { text: "Terminal", link: "/terminal/" },
-      { text: "Demos", link: "/demos" },
+      { text: "Demos", link: "/demos/" },
       { text: "Editor online", link: "/editor/" },
       { text: "标签云", link: "/tags/",tags:true },
       { text: "图博", link: "https://xinyi.tuchong.com/" },
