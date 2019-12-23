@@ -5,6 +5,16 @@
   "monaco-editor": "~0.18.1",
   "monaco-editor-webpack-plugin": "^1.7.0",
 }
+
+## .vuepress/config.js
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
+configureWebpack: {
+  plugins: [
+    new MonacoWebpackPlugin()
+  ]
+}
+
+## vue-page
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
