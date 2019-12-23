@@ -32,6 +32,7 @@ slug: home
     /* border:1px dashed #999; */
     width:100%;
   }
+
   .logo-name{
     color:#fff;
     text-align:center;
@@ -43,72 +44,29 @@ slug: home
     animation-name: lightSpeedIn;
     animation-delay: 4s;
   }
-  
-@keyframes slideInUp {
-  from {
-    -webkit-transform: translate3d(0, 200%, 0);
-    transform: translate3d(0, 200%, 0);
-    visibility: visible;
-  }
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-@keyframes zoomInDown {
-  from {
-    opacity: 0;
-    transform: scale3d(0, 0, 0) translate3d(0, 1000px, 0);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  40%{
+  @keyframes lightSpeedIn {
+    from {
+      -webkit-transform: translate3d(-100%, 0, 0) skewX(-30deg);
+      transform: translate3d(-100%, 0, 0) skewX(-30deg);
+      opacity: 0;
+    }
 
-  }
-  60% {
-    opacity: 1;
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-  }
-}
-@keyframes lightSpeedIn {
-  from {
-    -webkit-transform: translate3d(-100%, 0, 0) skewX(-30deg);
-    transform: translate3d(-100%, 0, 0) skewX(-30deg);
-    opacity: 0;
-  }
+    60% {
+      -webkit-transform: skewX(20deg);
+      transform: skewX(20deg);
+      opacity: 1;
+    }
 
-  60% {
-    -webkit-transform: skewX(20deg);
-    transform: skewX(20deg);
-    opacity: 1;
-  }
+    80% {
+      -webkit-transform: skewX(-5deg);
+      transform: skewX(-5deg);
+    }
 
-  80% {
-    -webkit-transform: skewX(-5deg);
-    transform: skewX(-5deg);
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
   }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-@keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
   .sense-logo-path {
     fill: transparent;
     stroke-width: 1px;
@@ -126,14 +84,12 @@ slug: home
   }
   .logo-shadow{
     fill:transparent;
-    
     animation: senseLogoShadow 1s linear forwards;
     animation-delay: 3s;
   }
   @keyframes senseLogoShadow {
     0% {
       fill: transparent;
-      
     }
     100% {
       fill: #383450;
