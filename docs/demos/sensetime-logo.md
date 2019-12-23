@@ -93,7 +93,6 @@ slug: home
     }
     100% {
       fill: #383450;
-      transform:translate(-116.4 -6.05);
     }
   }
   .logo-fill {
