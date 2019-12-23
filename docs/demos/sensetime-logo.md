@@ -63,7 +63,7 @@ slug: home
       fill: transparent;
     }
     100% {
-      fill: #383450;
+      fill: #c82526;
     }
   }
   .logo-fill {
