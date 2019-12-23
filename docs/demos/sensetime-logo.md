@@ -96,6 +96,7 @@ slug: home
     }
   }
   .logo-fill {
+    -webkit-animation: senseLogoFill 1s linear forwards;
     animation: senseLogoFill 1s linear forwards;
   }
   
