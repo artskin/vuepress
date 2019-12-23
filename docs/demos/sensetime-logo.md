@@ -7,8 +7,11 @@ slug: home
 ## SenseTime Logo 动画
 
 ### 涉及知识点
-> css+svg 
-- css3: offset-path → [传送门](https://css-tricks.com/)
+> svg + css制作公司logo片头动画
+- css background:radial-gradient 渐变
+- svg: < linearGradient /> 渐变设置
+- css3 animation 动画，及动画执行事件监控（webkitAnimationStart/webkitAnimationEnd/webkitAnimationIteration）
+- svg + css3:offset-path 自定义路径动画 → [传送门](https://css-tricks.com/)
 
 <!-- more -->
 ::: demo
@@ -164,8 +167,8 @@ export default {
     },
     changed(e){
       if(e.animationName ==='senseLogo'){
-        e.target.classList.add('logo-fill');
-        e.target.classList.add('iosFill'); //解决ios @keyframes fill: url(#senselinear) 无效问题;
+        e.target.classList.add('logo-fill','iosFill');
+        //e.target.classList.add('iosFill'); //解决ios @keyframes fill: url(#senselinear) 无效问题;
       }
     }
   }
