@@ -55,8 +55,8 @@ slug: home
   }
   .logo-shadow{
     fill:transparent;
-    animation: senseLogoShadow 1s linear forwards;
-    animation-delay: 3s;
+    animation: senseLogoShadow .6s linear forwards;
+    animation-delay: 3.5s;
   }
   @keyframes senseLogoShadow {
     0% {
