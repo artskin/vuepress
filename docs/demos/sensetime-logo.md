@@ -84,7 +84,7 @@ slug: home
   .logo-name{
     color:#fff;
     text-align:center;
-    font-size:32px;
+    font-size:34px;
     font-weight:bold;
     font-style: italic;
     letter-spacing: 2px;
@@ -97,8 +97,7 @@ slug: home
     text-shadow:1px -1px #c0c0c0,
                 2px -2px #b0b0b0,
                 3px -3px #a0a0a0,
-                4px -4px #909090,
-                6px -6px rgba(0, 0, 0, 0.6);
+                5px -5px rgba(0, 0, 0, 0.5);
                 
   }
   @keyframes lightSpeedIn {
