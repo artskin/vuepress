@@ -83,6 +83,7 @@ slug: home
   }
   .logo-name{
     color:#fff;
+    padding-top:10px;
     text-align:center;
     font-size:34px;
     font-weight:bold;
