@@ -84,16 +84,22 @@ slug: home
   .logo-name{
     color:#fff;
     text-align:center;
-    font-size:28px;
+    font-size:32px;
+    font-weight:bold;
+    font-style: italic;
+    letter-spacing: 2px;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     animation-name: lightSpeedIn;
     animation-delay: 4s;
-    color: #ED5053;
-    text-shadow:#eb393c 1px 1px, #f7acae -1px -1px, #ef6780 -2px -2px 6px, #f17577 -2px -2px, #f17577 -1px -2px, #f17577 -1px -3px, #f17577 -2px -4px, #f17577 -2px -5px, #f17577 -3px -6px, #ED5053 -4px -7px, rgba(0, 0, 5, 0.4) 3px 4px 5px, rgba(0, 0, 5, 0.2) -3px -4px 5px;
-    transform: rotate(-3deg);
+    text-shadow:1px -1px #c0c0c0,
+                2px -2px #b0b0b0,
+                3px -3px #a0a0a0,
+                4px -4px #909090,
+                6px -6px rgba(0, 0, 0, 0.6);
+                
   }
   @keyframes lightSpeedIn {
     from {
@@ -179,5 +185,6 @@ export default {
 - svg: < linearGradient /> 渐变设置
 - css3 animation 动画，及动画执行事件监控( webkitAnimationStart / webkitAnimationEnd / webkitAnimationIteration)
 - svg + css3:offset-path 自定义路径动画 → [传送门](https://css-tricks.com/)
+- css 立体文字写法
 
 >其他svg动画库 [vivus.js](http://maxwellito.github.io/vivus/)
