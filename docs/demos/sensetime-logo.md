@@ -15,10 +15,10 @@ slug: home
       <svg title="sense-logo" ref="logo" class="svg-logo" id="logo-layer" width="400" height="120" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
         <defs>
           <linearGradient id="senselinear" x1="40%" y1="0%" x2="80%" y2="100%">
-            <stop offset="0%" stop-color="#bc1410"/>
-            <stop offset="20%" stop-color="#e73620"/>
-            <stop offset="80%" stop-color="#e73620"/>
-            <stop offset="100%" stop-color="#bc1410"/>
+            <stop offset="0%" stop-color="#fca326"/>
+            <stop offset="20%" stop-color="#fc6d26"/>
+            <stop offset="80%" stop-color="#fc6d26"/>
+            <stop offset="100%" stop-color="#fca326"/>
           </linearGradient>
         </defs>
         <path v-on:webkitAnimationEnd="changed" class="sense-logo-path" stroke="url(#senselinear)" d="M380.781,64.312C353.644,1.52,280.806-4.127,231.582,26.965a285.3,285.3,0,0,0-41.319,33.166C22.39,248.262-2.658-15.6,144.647,70.843h.153c2.859,1.948,9.925-1,7.771-6.8v-.191a55.956,55.956,0,0,0-5.193-8.592C114.415,12.533,47.717,18.376,18.764,66.179-10.2,113.567,16.7,173.436,69.723,188.136h.21a131.376,131.376,0,0,0,77.54-8.172,218.126,218.126,0,0,0,43.63-26.731c39.411-28,87.87-108.121,135.127-64.9l.267.267.363.172c19.021,19.4,16.929,55.9-8.917,69.482-27.825,16.834-59.692,6.976-84.6-10.439-18.25,1.11,6.885,24.342,13.52,28.529a86.99,86.99,0,0,0,45.774,15.424C358.7,194.338,406.88,124.467,380.781,64.312Z"/>
@@ -63,7 +63,7 @@ slug: home
       fill: transparent;
     }
     100% {
-      fill: #bb1214;
+      fill: #e24329;
     }
   }
   .logo-fill {
@@ -91,6 +91,9 @@ slug: home
     animation-fill-mode: both;
     animation-name: lightSpeedIn;
     animation-delay: 4s;
+    color: #ED5053;
+    text-shadow:#eb393c 1px 1px, #f7acae -1px -1px, #ef6780 -2px -2px 6px, #f17577 -2px -2px, #f17577 -1px -2px, #f17577 -1px -3px, #f17577 -2px -4px, #f17577 -2px -5px, #f17577 -3px -6px, #ED5053 -4px -7px, rgba(0, 0, 5, 0.4) 3px 4px 5px, rgba(0, 0, 5, 0.2) -3px -4px 5px;
+    transform: rotate(-3deg);
   }
   @keyframes lightSpeedIn {
     from {
