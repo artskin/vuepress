@@ -49,6 +49,7 @@ npm config set registry https://registry.npm.taobao.org
 - [基因螺旋粒子](https://github.com/jackrugile/3d-particle-explorations)
 - [threejs](https://github.com/Mamboleoo/DecorativeBackgrounds/)
 - [银河系背景](http://www.htmleaf.com/html5/html5-canvas/201707294656.html)
+- [SVG科幻动画圆圈旋转](https://wow.techbrood.com/fiddle/32230)
 
 ### SVG动画资源
 - [svg 资源集合网站](http://svgtrick.com/)

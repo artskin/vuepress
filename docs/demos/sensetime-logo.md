@@ -12,16 +12,15 @@ slug: home
 <template>
   <div class="box-infinity">
     <div class="logo-area">
-      <svg title="sense-logo" ref="logo" class="svg-logo" id="logo-layer" width="400" height="120" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+      <svg title="sense-logo" ref="logo" class="svg-logo" width="400" height="120" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
         <defs>
           <linearGradient id="senselinear" x1="40%" y1="0%" x2="80%" y2="100%">
             <stop offset="0%" stop-color="#fca326"/>
-            <stop offset="20%" stop-color="#fc6d26"/>
-            <stop offset="80%" stop-color="#fc6d26"/>
+            <stop offset="70%" stop-color="#fc6d26"/>
             <stop offset="100%" stop-color="#fca326"/>
           </linearGradient>
         </defs>
-        <path v-on:webkitAnimationEnd="changed" class="sense-logo-path" stroke="url(#senselinear)" d="M380.781,64.312C353.644,1.52,280.806-4.127,231.582,26.965a285.3,285.3,0,0,0-41.319,33.166C22.39,248.262-2.658-15.6,144.647,70.843h.153c2.859,1.948,9.925-1,7.771-6.8v-.191a55.956,55.956,0,0,0-5.193-8.592C114.415,12.533,47.717,18.376,18.764,66.179-10.2,113.567,16.7,173.436,69.723,188.136h.21a131.376,131.376,0,0,0,77.54-8.172,218.126,218.126,0,0,0,43.63-26.731c39.411-28,87.87-108.121,135.127-64.9l.267.267.363.172c19.021,19.4,16.929,55.9-8.917,69.482-27.825,16.834-59.692,6.976-84.6-10.439-18.25,1.11,6.885,24.342,13.52,28.529a86.99,86.99,0,0,0,45.774,15.424C358.7,194.338,406.88,124.467,380.781,64.312Z"/>
+        <path class="sense-logo-path" stroke="url(#senselinear)" v-on:webkitAnimationEnd="animationEnd" d="M380.781,64.312C353.644,1.52,280.806-4.127,231.582,26.965a285.3,285.3,0,0,0-41.319,33.166C22.39,248.262-2.658-15.6,144.647,70.843h.153c2.859,1.948,9.925-1,7.771-6.8v-.191a55.956,55.956,0,0,0-5.193-8.592C114.415,12.533,47.717,18.376,18.764,66.179-10.2,113.567,16.7,173.436,69.723,188.136h.21a131.376,131.376,0,0,0,77.54-8.172,218.126,218.126,0,0,0,43.63-26.731c39.411-28,87.87-108.121,135.127-64.9l.267.267.363.172c19.021,19.4,16.929,55.9-8.917,69.482-27.825,16.834-59.692,6.976-84.6-10.439-18.25,1.11,6.885,24.342,13.52,28.529a86.99,86.99,0,0,0,45.774,15.424C358.7,194.338,406.88,124.467,380.781,64.312Z"/>
         <path class="logo-shadow" d="M155.315,100.243C59.724,197.125-5.895,120.625,25.75,63.7,52.964,18.71,125.769,19.211,149.456,66.03,111.232,17.75,33.5,38.473,44.092,100.854h0C63.3,166.246,138.92,115.857,155.315,100.243Z"/>
         <path class="logo-shadow" d="M362.787,155.518h0c0,.01-.01.01-.01.019-36.8,44.224-104.649,42.55-132.191-3.667,27.555,29.731,70.77,31.543,95.3,8.025,42.071-40.558,3.213-106.164-48.283-85.346-20.932,9.151-42.266,32.6-56.275,45.4C317.011-20.7,410.713,88.555,362.787,155.518Z"/></svg>
       <div class="logo-name">SenseTime</div>
@@ -63,7 +62,7 @@ slug: home
       fill: transparent;
     }
     100% {
-      fill: #e24329;
+      fill: #eb6420;
     }
   }
   .logo-fill {
@@ -85,7 +84,7 @@ slug: home
     color:#fff;
     padding-top:10px;
     text-align:center;
-    font-size:34px;
+    font-size:36px;
     font-weight:bold;
     font-style: italic;
     letter-spacing: 2px;
@@ -98,8 +97,7 @@ slug: home
     text-shadow:1px -1px #c0c0c0,
                 2px -2px #b0b0b0,
                 3px -3px #a0a0a0,
-                5px -5px rgba(0, 0, 0, 0.5);
-                
+                5px -5px rgba(0, 0, 0, 0.4);
   }
   @keyframes lightSpeedIn {
     from {
@@ -167,9 +165,12 @@ export default {
       let logoPath = this.$refs.logo.children[1];
       console.log(logoPath.getTotalLength())
     },
-    changed(e){
+    animationEnd(e){
       if(e.animationName ==='senseLogo'){
-        e.target.classList.add('logo-fill','iosFill');
+        e.target.classList.add('logo-fill');
+        setTimeout(()=>{
+          e.target.classList.add('iosFill');
+        },1000)
         //e.target.classList.add('iosFill'); //解决ios @keyframes fill: url(#senselinear) 无效问题;
       }
     }
