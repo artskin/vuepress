@@ -26,7 +26,15 @@ slug: home
   .sense-logo-white{
     background:#fff;
     fill: transparent;
-    animation: senseLogo 3s ease-in-out forwards;
+    animation: senseLogoWhite 2s ease-in-out forwards;
+  }
+  @keyframes senseLogoWhite {
+    0% {
+      stroke-dasharray: 0 1611px;
+    }
+    100% {
+      stroke-dasharray: 1611px 0;
+    }
   }
   
   .logo-white .logo-fill {
@@ -66,7 +74,7 @@ slug: home
     },
     methods:{
       animationEnd(e){
-        if(e.animationName ==='senseLogo'){
+        if(e.animationName ==='senseLogoWhite'){
           e.target.classList.add('logo-fill');
           setTimeout(()=>{
             e.target.classList.add('iosFill');
@@ -114,7 +122,7 @@ slug: home
   .sense-logo-path {
     fill: transparent;
     stroke: url(#senselinear);
-    animation: senseLogo 3s ease-in-out forwards;
+    animation: senseLogo 4s ease-in-out forwards;
     /*stroke-dasharray: 5px 20px;*/
   }
   @keyframes senseLogo {
@@ -128,7 +136,7 @@ slug: home
   .logo-shadow{
     fill:transparent;
     animation: senseLogoShadow .6s linear forwards;
-    animation-delay: 3.5s;
+    animation-delay: 4.5s;
   }
   @keyframes senseLogoShadow {
     0% {
