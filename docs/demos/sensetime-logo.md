@@ -6,6 +6,79 @@ slug: home
 ---
 ## SenseTime Logo 动画
 
+::: demo
+```html
+<template>
+  <div class="box-infinity box-black">
+    <div class="logo-area logo-white">
+      <svg title="sense-logo" ref="logo" class="svg-logo" width="400" height="120" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+        <path class="sense-logo-white" stroke="#fff" v-on:webkitAnimationEnd="animationEnd" d="M380.781,64.312C353.644,1.52,280.806-4.127,231.582,26.965a285.3,285.3,0,0,0-41.319,33.166C22.39,248.262-2.658-15.6,144.647,70.843h.153c2.859,1.948,9.925-1,7.771-6.8v-.191a55.956,55.956,0,0,0-5.193-8.592C114.415,12.533,47.717,18.376,18.764,66.179-10.2,113.567,16.7,173.436,69.723,188.136h.21a131.376,131.376,0,0,0,77.54-8.172,218.126,218.126,0,0,0,43.63-26.731c39.411-28,87.87-108.121,135.127-64.9l.267.267.363.172c19.021,19.4,16.929,55.9-8.917,69.482-27.825,16.834-59.692,6.976-84.6-10.439-18.25,1.11,6.885,24.342,13.52,28.529a86.99,86.99,0,0,0,45.774,15.424C358.7,194.338,406.88,124.467,380.781,64.312Z"/>
+        <path class="logo-shadow" d="M155.315,100.243C59.724,197.125-5.895,120.625,25.75,63.7,52.964,18.71,125.769,19.211,149.456,66.03,111.232,17.75,33.5,38.473,44.092,100.854h0C63.3,166.246,138.92,115.857,155.315,100.243Z"/>
+        <path class="logo-shadow" d="M362.787,155.518h0c0,.01-.01.01-.01.019-36.8,44.224-104.649,42.55-132.191-3.667,27.555,29.731,70.77,31.543,95.3,8.025,42.071-40.558,3.213-106.164-48.283-85.346-20.932,9.151-42.266,32.6-56.275,45.4C317.011-20.7,410.713,88.555,362.787,155.518Z"/></svg>
+      <div class="logo-name">SenseTime</div>
+      <div class="rect"></div>
+    </div>
+  </div>
+  <style>
+  .box-black{
+    background:#1d1b47!important;
+  }
+  .sense-logo-white{
+    background:#fff;
+    fill: transparent;
+    animation: senseLogo 3s ease-in-out forwards;
+  }
+  
+  .logo-white .logo-fill {
+    -webkit-animation: senseLogoWhiteFill 1s linear;
+    animation: senseLogoWhiteFill 1s linear;
+  }
+  @-webkit-keyframes senseLogoWhiteFill {
+    from {
+      fill: transparent;
+    }
+    to {
+      fill: #fff;
+    }
+  }
+  .logo-white .iosFill {
+    fill:#fff;
+  }
+  .logo-white .logo-shadow {
+    fill: transparent;
+    animation: senseLogoShadowEmpty .6s linear forwards;
+    animation-delay: 3.5s;
+  }
+  @keyframes senseLogoShadowEmpty {
+    0% {
+      fill: transparent;
+    }
+    100% {
+      fill: #1d1b47;
+    }
+  }
+  </style>
+  <script>
+  export default {
+    data: () => ({}),
+    mounted(){
+      
+    },
+    methods:{
+      animationEnd(e){
+        if(e.animationName ==='senseLogo'){
+          e.target.classList.add('logo-fill');
+          setTimeout(()=>{
+            e.target.classList.add('iosFill');
+          },1000)
+          //e.target.classList.add('iosFill'); //解决ios @keyframes fill: url(#senselinear) 无效问题;
+        }
+      }
+    }
+  }
+  </script>
+</template>
+:::
 <!-- more -->
 ::: demo
 ```html
