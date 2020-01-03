@@ -30,8 +30,8 @@ slug: home
 
 
 
-## 快速入口
+## 其他有趣的小工具
 
-[linux命令](/terminal/) | 
+[基于CSS3线性渐变实现的虚线CSS生成工具](https://www.zhangxinxu.com/study/201710/css3-linear-gradient-dashed-generate.html) | 
 [常用笔记](/notes/) 
 
