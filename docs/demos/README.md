@@ -33,5 +33,7 @@ slug: home
 ## 其他有趣的小工具
 
 [基于CSS3线性渐变实现的虚线CSS生成工具](https://www.zhangxinxu.com/study/201710/css3-linear-gradient-dashed-generate.html) | 
-[常用笔记](/notes/) 
+[css:clip-path 工具 clippy](https://bennettfeely.com/clippy/) 
+[css:flexplorer](https://bennettfeely.com/flexplorer/) 
+[css:渐变](https://bennettfeely.com/cssscales/) 
 
