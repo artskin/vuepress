@@ -16,6 +16,7 @@ slug: home
 - 雷达扫描 → [Demo](/demos/radar.html)
 - 莫比乌斯环 → [Demo](/demos/infinity.html)
 - SenseTime Logo → [Demo](/demos/sensetime-logo.html)
+- 八卦图 → [Demo](/demos/gossip.html)
 - 仿探探左滑右滑 → [Demo](https://artskin.github.io/jsCase/tantan.slide.html)
 - Canvas 绘图 → [Demo](https://artskin.github.io/jsCase/canvas.html)
 - 邮件签名 → [Demo](https://artskin.github.io/jsCase/mail_sign.html)
