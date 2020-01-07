@@ -16,7 +16,7 @@ slug: home
 ```html
 <template>
   <div class="demo-bg">
-    <div class="radar">
+    <div class="scan-area">
       <div class="circle">
         <div class="circle-inner">
           <div class="circle-scan">
@@ -25,7 +25,7 @@ slug: home
         </div>
         <img src="/assets/images/head.gif?v=2" alt="face" />
       </div>
-      <div class="radar-border"></div>
+      <div class="scan-area-border"></div>
     </div>
   </div>
 </template>
@@ -50,16 +50,16 @@ slug: home
     height:100%;
     z-index:0;
   }
-  .radar{
+  .scan-area{
     position:relative;
     width: 240px;
     height: 240px;
     padding:20px;
   }
-  .radar:before,
-  .radar:after,
-  .radar-border:before,
-  .radar-border:after{
+  .scan-area:before,
+  .scan-area:after,
+  .scan-area-border:before,
+  .scan-area-border:after{
     content:'';
     position:absolute;
     width:40px;
@@ -67,27 +67,27 @@ slug: home
     border-style:solid;
     border-color:#54d0e1;
   }
-  .radar:before,
-  .radar:after{
+  .scan-area:before,
+  .scan-area:after{
     top:0;
   }
-  .radar:before{
+  .scan-area:before{
     left:0;
     border-width:2px 0 0 2px;
   }
-  .radar:after{
+  .scan-area:after{
     right:0;
     border-width:2px 2px 0 0;
   }
-  .radar-border:before,
-  .radar-border:after{
+  .scan-area-border:before,
+  .scan-area-border:after{
     bottom:0;
   }
-  .radar-border:before{
+  .scan-area-border:before{
     left:0;
     border-width:0 0 2px 2px;
   }
-  .radar-border:after{
+  .scan-area-border:after{
     right:0;
     border-width:0 2px 2px 0;
   }
@@ -160,7 +160,7 @@ slug: home
     left:0;
     width:100%;
     height:100%;
-    animation: radarBeam 3s infinite;
+    animation: scanBeam 3s infinite;
     animation-timing-function: linear;
     animation-delay: 3s;
     background-image: linear-gradient(180deg, rgba(95, 214, 249, 0) 50%, rgba(95, 214, 249, .9) 100%);
@@ -172,7 +172,7 @@ slug: home
   }
   .circle img{width:100%;border-radius: 50%;z-index:-2}
 
-  @keyframes radarBeam {
+  @keyframes scanBeam {
     0%,60% {
       border-bottom-width:0;
       max-height:0%;
