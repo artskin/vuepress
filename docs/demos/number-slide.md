@@ -7,23 +7,15 @@ slug: home
 ## 数字更新时上下滑动效果
 
 ### 背景介绍
-> 项目用到这个效果，网上找了下现成的例子，发现代码量还不少，有的甚至需要npm两个包，感觉没必要。
+> 项目用到这个效果，网上找了下类似的组件，发现代码量还不少，有的甚至需要npm两个包，感觉没必要。
 其实原理也很简单，不如自己写一个吧。借助vue,css3,非常简单的实现。
-
-核心代码js和css，一共20行左右。
-
-### 知识点
-- vue watch
-- css3动画
-
-- ps：表单输入数字，或按键盘方向上下键看效果
 
 <!-- more -->
 ::: demo
 ```html
 <template>
   <div class="box-infinity">
-    <div style="width:40%">
+    <div style="width:50%">
       <div ref="numberSlide" class="number-slide">
         <i v-for="item in numberList" :style="'transform:translateY(-' +item + 'em)'" :key="item.key">{{item}}</i>
       </div>
@@ -100,3 +92,15 @@ export default {
   }
 </style>
 :::
+
+
+核心代码js和css，20行左右。
+
+### 知识点
+- vue watch
+- css3动画
+
+- ps：表单输入数字，或按键盘方向上下键看效果
+
+### 延伸阅读
+网上此类效果库：[https://github.com/xlsdg/vue-odometer](https://github.com/xlsdg/vue-odometer)
