@@ -7,9 +7,10 @@ slug: home
 ## 数字更新时上下滑动效果
 
 ### 背景介绍
-> 项目用到这个效果，网上找了下现成的例子，发现代码量还不少，有个甚至需要npm两个包，有点没必要。
+> 项目用到这个效果，网上找了下现成的例子，发现代码量还不少，有的甚至需要npm两个包，感觉没必要。
 其实原理也很简单，不如自己写一个吧。借助vue,css3,非常简单的实现。
-包含vue的架子和css，本实例用到的也不到50行代码。
+
+核心代码js和css，一共20行左右。
 
 ### 知识点
 - vue watch
@@ -22,10 +23,20 @@ slug: home
 ```html
 <template>
   <div class="box-infinity">
-    <div ref="numberSlide" class="number-slide">
-      <i v-for="item in numberList" :style="'transform:translateY(-' +item + 'em)'" :key="item.key">{{item}}</i>
+    <div style="width:40%">
+      <div ref="numberSlide" class="number-slide">
+        <i v-for="item in numberList" :style="'transform:translateY(-' +item + 'em)'" :key="item.key">{{item}}</i>
+      </div>
+      <input type="number" v-model.number="growValue">
+      <br>
+      <br>
+      <div class="flex">
+        <button @click="addNumber(1)">+ 1</button> 
+        <button @click="addNumber(-1)">- 1</button> 
+        <button @click="addNumber(10)">+ 10</button>
+        <button @click="addNumber(100)">+ 100</button>
+      </div>
     </div>
-    <input type="number" v-model.number="growValue">
   </div>
 </template>
 <script>
@@ -46,21 +57,19 @@ export default {
     creatNumber(){
       let arr = String(this.growValue).split('');
       this.numberList = arr;
+    },
+    addNumber(step){
+      if((this.growValue + step) > 0){
+        this.growValue += step;
+      }
     }
   }
 }
 </script>
 <style>
   div{box-sizing: border-box;}
-  .box-infinity{
-    height:auto;
-    background: #092756;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    flex-direction: column;
-    min-height:400px;
-  }
+  .box-infinity{height:auto;background: #092756;display:flex;justify-content: center;align-items:center;flex-direction: column;min-height:300px;}
+  .box-infinity input{width:100%;box-sizing: border-box;}
   .number-slide {
     font-size: 58px;
     color: orange;
