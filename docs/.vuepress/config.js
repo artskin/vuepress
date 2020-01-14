@@ -4,11 +4,12 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' }],
+    ['meta', { name: 'keywords', content: 'web前端技术,前端思考,ECMAS,js,css3,vue' }],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js' }],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js' }],
   ],
-  title: "前端笔记",
-  description: "Note,Document library",
+  title: "前端思考",
+  description: "前端思考，web前端代码及新技术试验场",
   markdown: {
     // 代码显示行号
     lineNumbers: true,

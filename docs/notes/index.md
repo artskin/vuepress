@@ -54,6 +54,7 @@ npm config set registry https://registry.npm.taobao.org
 ### SVG动画资源
 - [svg 资源集合网站](http://svgtrick.com/)
 - [animejs](https://animejs.com/)
+- [tweenmax案例](https://www.tweenmax.com.cn/cool/)
 
 ### webpack
 为处理资源管理和分割代码而生，可以包含任何类型的文件。灵活，插件多。

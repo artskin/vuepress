@@ -16,6 +16,15 @@ slug: home
 <template>
   <div class="box-infinity">
     <div class="loading">loading</div>
+    <svg style="display:none">
+      <defs>
+          <linearGradient id="borderlinear">
+            <stop offset="0%" stop-color="#0F4C81"/>
+            <stop offset="100%" stop-color="#4C8EC9"/>
+          </linearGradient></defs></svg>
+    <div class="circle">
+      <svg width="100%" height="100%" viewBox="0 0 100% 100%"><circle stroke-dasharray="200% 300%" cx="50%" cy="50%" r="47%" /></svg>
+    </div>
   
   </div>
 </template>
@@ -51,6 +60,28 @@ slug: home
     100%{
       width:0.6em;
     }
+  }
+  .circle{
+    width:120px;
+    height:120px;
+    overflow:hidden;
+    background:rgba(0,0,0,.2)
+  }
+  .circle circle{ 
+    fill:transparent;
+    stroke-width:6%;
+    stroke-linecap:round;
+    stroke:url(#borderlinear);
+    animation:2s cicleRun ease-in-out forwards;
+    /* stroke-dasharray: 160px 377px; */
+  }
+  @keyframes cicleRun{
+    /* 0%{
+      stroke-dasharray: 0 377px;
+    }
+    50%{
+      stroke-dasharray: 377px 0;
+    } */
   }
 </style>
 <script>
