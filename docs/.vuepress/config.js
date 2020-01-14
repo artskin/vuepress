@@ -17,6 +17,7 @@ module.exports = {
   enhanceAppFiles: path.resolve(__dirname, './enhanceApp.ts'),
   //theme:'reform',
   themeConfig: {
+    logo: '/assets/images/logo.svg',
     type: "blog",
     tags:"tags",
     blogConfig: {
