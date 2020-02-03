@@ -104,3 +104,16 @@ node -v          检查当期版本
 
 source $ZSH/oh-my-zsh.sh
 ```
+
+
+## 微软新终端
+[Windows Terminal](https://github.com/microsoft/terminal)
+
+### 微软推出卡斯卡迪亚字体，专为Windows Terminal设计的等宽字体
+
+>卡斯卡迪亚字体 (Cascadia Code) https://github.com/microsoft/cascadia-code/releases
+
+
+https://fontawesome.com/start
+
+https://github.com/powerline/fonts
