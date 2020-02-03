@@ -28,6 +28,30 @@ slug: home
     </div>
   </div>
 </template>
+<script>
+export default {
+  data: () => ({}),
+  mounted(){
+    this.getSvgPathLength();//获取svg:path长度
+  },
+  methods:{
+    getSvgPathLength(){
+      let logoPath = this.$refs.logo.children[1];
+      console.log(logoPath.getTotalLength())
+    },
+    animationEnd(e){
+      console.log(e)
+      if(e.animationName ==='senseLogo'){
+        e.target.classList.add('logo-fill');
+        // setTimeout(()=>{
+        //   e.target.classList.add('iosFill');
+        // },100)
+        //e.target.classList.add('iosFill'); //解决ios @keyframes fill: url(#senselinear) 无效问题;
+      }
+    }
+  }
+}
+</script>
 <style>
   .logo-area {
     position: relative;
@@ -156,29 +180,6 @@ slug: home
   }
   .vuepress-plugin-demo-block__wrapper .vuepress-plugin-demo-block__display{max-height:550px!important;}
 </style>
-<script>
-export default {
-  data: () => ({}),
-  mounted(){
-    this.getSvgPathLength();//获取svg:path长度
-  },
-  methods:{
-    getSvgPathLength(){
-      let logoPath = this.$refs.logo.children[1];
-      console.log(logoPath.getTotalLength())
-    },
-    animationEnd(e){
-      console.log(e)
-      if(e.animationName ==='senseLogo'){
-        e.target.classList.add('logo-fill');
-        // setTimeout(()=>{
-        //   e.target.classList.add('iosFill');
-        // },100)
-        //e.target.classList.add('iosFill'); //解决ios @keyframes fill: url(#senselinear) 无效问题;
-      }
-    }
-  }
-}
-</script>
+
 
 :::
