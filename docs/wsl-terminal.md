@@ -117,3 +117,10 @@ source $ZSH/oh-my-zsh.sh
 https://fontawesome.com/start
 
 https://github.com/powerline/fonts
+
+## VS-code 插件及配置
+
+### 必装插件
+1. GitLens 展示 git 的提交历史，精确到行
+2. Vetur
+3. Import Cost 有助于你认识到你引入的文件大小

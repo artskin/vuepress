@@ -69,10 +69,10 @@ export default {
   }
   @keyframes senseLogo {
     0% {
-      stroke-dasharray: 0 3687px;
+      stroke-dasharray: 0 5687px;
     }
     100% {
-      stroke-dasharray: 3687px 0;
+      stroke-dasharray: 5687px 0;
     }
   }
   .logo-shadow{
