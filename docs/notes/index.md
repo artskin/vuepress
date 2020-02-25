@@ -22,6 +22,21 @@ npm config set registry http://registry.npmjs.org
 
 # 如果还不能下载，就切换成淘宝源
 npm config set registry https://registry.npm.taobao.org
+
+# yarn 获取默认安装源
+yarn config get registry https://registry.yarnpkg.com
+
+# yarn 设置新安装源
+yarn config set registry https://registry.npm.taobao.org
+```
+
+## git回退版本
+
+```ts
+git reset --hard id //(例如commit id 为: 7222c8f6be2d663982faa98dffe2647966b438b1)
+
+git push origin HEAD --force //推送到本地到远程仓库：让远程仓库代码和你本地一样，到当前你本地的版本。
+
 ```
 ## OpenLayers资源
 
