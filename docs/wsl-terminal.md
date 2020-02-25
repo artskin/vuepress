@@ -26,7 +26,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ## zsh 配置
 
 ```shell
-vi ~/.zshrc //打开编辑配置
+vi ~/.zshrc //打开编辑配置MesloLGS NF
 
 ```
 
@@ -55,7 +55,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+git clone           https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 ```
 
 
@@ -113,6 +113,7 @@ source $ZSH/oh-my-zsh.sh
 
 >卡斯卡迪亚字体 (Cascadia Code) https://github.com/microsoft/cascadia-code/releases
 
+fontFamily:Consolas, Hack,'3270Narrow Nerd Font','Cascadia Code','MesloLGS NF'
 
 https://fontawesome.com/start
 
@@ -124,3 +125,30 @@ https://github.com/powerline/fonts
 1. GitLens 展示 git 的提交历史，精确到行
 2. Vetur
 3. Import Cost 有助于你认识到你引入的文件大小
+
+
+## windows 另外一个新终端
+
+[FluentTerminal](https://github.com/felixse/FluentTerminal/releases)
+
+### 安装 
+
+用管理员方式打开powershell，输入下面一行代码。安装过程中出现的问题输入Y
+```bash
+
+choco install fluent-terminal
+```
+
+
+## GitHub网站打开满的解决办法
+
+>修改host文件
+键入网址：http://github.global.ssl.fastly.net.ipaddress.com/#ipinfo
+
+拿到github.global.ssl.fastly.net的ip地址，写入host文件，覆盖系统host文件或者加入新的地址。
+
+```bash
+#github
+192.30.253.112 github.com 
+199.232.5.194 github.global.ssl.fastly.net
+```
