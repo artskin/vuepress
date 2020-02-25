@@ -38,6 +38,8 @@ npm config set registry https://registry.npm.taobao.org
 - [vuepress中使用typescript](https://vuepress.github.io/zh/plugins/typescript/)
 - [vuepress博客主题](https://vuepress-theme-reco.recoluan.com/)
 - [vuepress基于默认主题的博客主题](https://github.com/xuzhongpeng/vuepress-theme-reform)
+- [Yubisaki 主题的使用](https://wuwaki.me/yubisaki/usage.html)
+- [Yubisaki 主题的使用](https://lewiscutey.github.io/blog/blog/vuepress-theme-toos.html)
 - [前端进阶面试题](https://muyiy.cn/question/)
 - [一行代码实现本地https证书校验](https://github.com/FiloSottile/mkcert)
 - [国际化自动替换助手](https://github.com/alibaba/kiwi)
