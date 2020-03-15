@@ -60,17 +60,17 @@ export default {
 </script>
 <style>
   div{box-sizing: border-box;}
-  .box-infinity{height:auto;background: #092756;display:flex;justify-content: center;align-items:center;flex-direction: column;min-height:300px;}
+  .box-infinity{height:auto;display:flex;justify-content: center;align-items:center;flex-direction: column;min-height:300px;}
   .box-infinity input{width:100%;box-sizing: border-box;}
   .number-slide {
     font-size: 58px;
-    color: orange;
+    color: #3eaf7c;
     overflow: hidden;
     line-height:1;
     height: 1em;
     width: 100%;
     text-align: center;
-    color: rgba(255, 255, 255, 0);
+    /* color: rgba(255, 255, 255, 0); */
     margin-bottom:20px;
   }
   .number-slide i{
@@ -82,7 +82,7 @@ export default {
   .number-slide i::after{
     content:'0 1 2 3 4 5 6 7 8 9';
     position:absolute;
-    color:#fff;
+    color:currentColor;
     font-weight: normal;
     display: block;
     width: 1em;
