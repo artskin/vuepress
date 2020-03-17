@@ -28,6 +28,20 @@ yarn config get registry https://registry.yarnpkg.com
 
 # yarn 设置新安装源
 yarn config set registry https://registry.npm.taobao.org
+
+# yarn 安装或升级最新版本
+sudo apt-get update && sudo apt-get install yarn
+
+# git 添加子仓库
+//在主仓库执行如下命令
+git submodule add 子仓库ssh地址
+//添加成功后主仓库根目录增加了.gitmodule文件
+
+# 添加完子仓库后
+git submodule init // 初始化本地配置文件
+
+git submodule update // 检出主仓库列出的commit
+
 ```
 
 ## git回退版本
