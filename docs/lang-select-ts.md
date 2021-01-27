@@ -6,7 +6,7 @@
 :::demo
 ```html
 <template>
-  <LangSelect  :langList="langList" @onLangChanged="langChanged">{{langList[0]}}</LangSelect>
+  <LangSelect :langList="langList" @onLangChanged="langChanged">{{langList[0]}}</LangSelect>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'

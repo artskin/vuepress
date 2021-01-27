@@ -5,11 +5,11 @@ module.exports = {
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' }],
     ['meta', { name: 'keywords', content: 'web前端技术,前端思考,ECMAS,js,css3,vue' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js' }],
-    ['script', { src: 'https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.0/index.min.js' }],
+    // ['script', { src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js' }],
+    // ['script', { src: 'https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.0/index.min.js' }],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js' }],
   ],
-  title: "前端思考",
+  title: "BS-Components",
   description: "前端思考，web前端代码及新技术试验场",
   markdown: {
     // 代码显示行号
@@ -34,27 +34,18 @@ module.exports = {
     author: "Amu",
     nav: [
       { text: "Home", link: "/" },
-      { text: "Notes", link: "/notes/" },
-      { text: "Terminal", link: "/terminal/" },
-      { text: "Demos", link: "/demos/" },
-      { text: "Editor online", link: "/editor/" },
-	    { text: 'Github', link: 'https://github.com/artskin' }
+      { text: "文档", link: "/docs/" },
+      { text: "组件及示例", link: "/components/" },
+	    { text: 'Gitlab', link: 'https://gitlab.sz.sensetime.com/fe/bs-components.git' }
     ],
     sidebar: 'auto',
     sidebarDepth : 1,
   },
   dest: "public",
-  plugins: {
-    'demo-block':true,
-    'vuepress-plugin-typescript':true,
-    'typescript':{
-      tsLoaderOptions: {
-        // ts-loader 的所有配置项
-      },
-    },
-    axios:true
-  
-  },
+  plugins: [
+    'vuepress-plugin-typescript',
+    'leo-demo-block'
+  ],
   configureWebpack: {
     plugins: [
       //new MonacoWebpackPlugin()

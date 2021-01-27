@@ -1,14 +1,15 @@
 <template>
   <ParentLayout>
-    <Content/>
     {{message}}
+    <Content/>
+    
   </ParentLayout>
 </template>
 
 <script>
 import { Component, Vue } from 'vue-property-decorator'
 import ParentLayout from '@parent-theme/layouts/Layout.vue'
-console.log(ParentLayout)
+
 @Component({
   components: {
     ParentLayout,

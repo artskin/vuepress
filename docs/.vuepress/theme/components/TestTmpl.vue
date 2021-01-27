@@ -8,7 +8,7 @@
 import { Component, Vue } from 'vue-property-decorator'
 
 @Component
-export default class Test extends Vue {
+export default class TestTmpl extends Vue {
   message = 'Test Component'
 }
 </script>

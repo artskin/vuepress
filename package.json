@@ -1,5 +1,5 @@
 {
-  "name": "y",
+  "name": "components-doc",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,16 +11,21 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vuepress": "^1.8.0"
+    "vuepress": "^1.8.0",
+    "vuepress-plugin-leo-demo-block": "^0.1.1"
   },
   "dependencies": {
+    "async-validator": "^1.11.5",
     "element-ui": "^2.15.0",
+    "sass": "^1.32.5",
+    "sass-loader": "^10.1.1",
     "stylus": "^0.54.8",
+    "ts-loader": "^8.0.14",
     "typescript": "^4.1.3",
     "vue-class-component": "^7.2.6",
     "vue-property-decorator": "^9.1.2",
     "vuepress-plugin-demo-block": "^0.7.2",
     "vuepress-plugin-typescript": "^0.3.1",
-    "vuepress-theme-reform": "^1.5.1"
+    "vuepress-types": "^0.9.4"
   }
 }

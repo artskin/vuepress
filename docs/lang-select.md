@@ -1,34 +1,31 @@
-# image-item
 
+# LangSelect 语言选择
+
+## 基础用法
 
 :::demo
 ```html
 <template>
-<div>
-  vue <strong>{{ title }}</strong>
-  <ImageItem class="img-layer" :item="item" />
-</div>
+  <LangSelect :langList="langList" :lang="currentLang" @onLangChanged="getLang">
+    <el-button>{{currentLang}}</el-button>
+  </LangSelect>
 </template>
 <script lang="ts">
-  export default{
-    data(){
-      return{
-        title:'image-item 组件示例',
-        item:{
-          imgUrl:'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',
-          score:'0.8'
-        }
+  export default {
+    data:()=>({
+      currentLang:'en',
+      langList : ['en','zh']
+    }),
+    methods:{
+      getLang(e){
+        this.currentLang = e;
       }
     }
   }
 </script>
-<style>
-.img-layer{
-  width:200px;
-}
-</style>
 ```
 :::
+
 
 
 ## 属性
