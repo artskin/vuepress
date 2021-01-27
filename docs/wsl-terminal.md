@@ -80,8 +80,11 @@ sudo apt install -y nodejs
 sudo apt-get install npm 
 sudo npm install n -g
 sudo n stable
-//安装完重启终端
-
+# 安装完重启终端
+# bash安装 node 和npm之后，zsh终端不识别问题
+vi ~/.zshrc
+add 
+export PATH=/usr/local/share/npm/bin:$PATH
 ```
 
 ```shell
