@@ -33,7 +33,12 @@
   "include": [
     "docs/.vuepress/**/*.ts", 
     "docs/.vuepress/**/*.vue",
-    "docs/.vuepress/**/*.md",
+    "docs/.vuepress/**/*.md", 
+    "docs/.vuepress/config.js",
+    "docs/packages/**/*.vue",
+    "docs/packages/**/*.md", 
+    "docs/.vuepress/theme/components/TestTmpl.vue", 
+    "docs/*.md"
   ],
   "exclude": [
     "node_modules"

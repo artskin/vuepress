@@ -1,35 +1,36 @@
-# image-item
 
+# ImagePlus 增强图片组件
+
+> 大图轮播，下载，切换
+## 基础用法
 
 :::demo
 ```html
 <template>
-<div>
-  vue <strong>{{ title }}</strong>
-  <ImageItem class="img-layer" :item="item" />
-</div>
+  <ImagePlus :imgInfo="imgInfo"></ImagePlus>
 </template>
 <script lang="ts">
-  export default{
-    data(){
-      return{
-        title:'image-item 组件示例',
-        item:{
-          imgUrl:'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',
-          score:'0.8'
-        }
-      }
-    }
-  }
-</script>
-<style>
-.img-layer{
-  width:200px;
+export interface imgInfoType{
+  name:string
+  imgUrl:string
+  bigImgList:Array<string>
 }
-</style>
+import { Component, Vue } from 'vue-property-decorator'
+@Component({
+  components:{
+    ImagePlus
+  }
+})
+export default class extends Vue {
+  imgInfo:imgInfoType={
+    name:'',
+    imgUrl:'',
+    bigImgList:[]
+  }
+}
+</script>
 ```
 :::
-
 
 ## 属性
 
