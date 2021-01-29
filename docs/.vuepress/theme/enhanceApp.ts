@@ -9,8 +9,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 //import Test from './components/Test.vue'
 //console.log(ElementUI)
 import TestTmpl from './components/TestTmpl.vue'
-import ImageItem from './components/ImageItem.vue'
-import LangSelect from '../../packages/langSelect/index.vue'
+import ImageItem from '../../../packages/ImageItem/index.vue'
+import LangSelect from '../../../packages/langSelect/index.vue'
 import TestTsFile from './components/TestTsFile'
 import TestIndexTsFile from './components/TestIndexTsFile'
 const enhanceApp: EnhanceApp = ({ Vue }) => {

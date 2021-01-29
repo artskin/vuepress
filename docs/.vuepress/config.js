@@ -1,5 +1,7 @@
 const path = require('path');
+//"vuepress-plugin-leo-demo-block": "^0.1.1"
 //const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
+console.log(path.resolve(__dirname))
 module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -44,7 +46,13 @@ module.exports = {
   dest: "public",
   plugins: [
     'vuepress-plugin-typescript',
-    'leo-demo-block'
+    'leo-demo-block',
+    [
+      'register-components',
+      {
+        componentsDir: path.resolve(__dirname, '/')
+      }
+    ]
   ],
   configureWebpack: {
     plugins: [
