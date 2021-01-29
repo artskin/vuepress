@@ -1,33 +1,19 @@
 {
-  "name": "components-doc",
+  "name": "vuepress-next-doc",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "npx vuepress dev docs --port 2020",
+    "docs:dev": "vuepress dev docs --port 5022",
     "docs:build": "vuepress build docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vuepress-types": "^0.9.4",
-    "vuepress": "^1.8.0",
-    "vuepress-plugin-typescript": "^0.3.1"
+    "vuepress": "^2.0.0-alpha.19"
   },
   "dependencies": {
-    "async-validator": "^1.11.5",
-    "element-ui": "^2.15.0",
-    "sass": "^1.32.5",
-    "sass-loader": "^10.1.1",
-    "stylus": "^0.54.8",
-    "stylus-loader": "^4.3.3",
-    "ts-loader": "^8.0.14",
-    "typescript": "^4.1.3",
-    "vue-class-component": "^7.2.6",
-    "vue-property-decorator": "^9.1.2",
-    "vuepress-plugin-demo-block": "^0.7.2",
-    "vuepress-plugin-leo-demo-block": "^0.1.1",
-    "vuepress-theme-reform": "^1.5.1"
+    "esbuild": "^0.8.36"
   }
 }
