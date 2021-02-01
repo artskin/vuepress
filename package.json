@@ -5,18 +5,13 @@
   "main": "index.js",
   "scripts": {
     "docs:dev": "vuepress dev docs --port 5022",
-    "docs:build": "vuepress build docs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docs:build": "vuepress build docs"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "vue-class-component": "^8.0.0-rc.1",
-    "vue-property-decorator": "^9.1.2",
     "vuepress": "^2.0.0-alpha.19",
     "vuepress-plugin-typescript": "^0.3.1"
-  },
-  "dependencies": {
-    "esbuild": "^0.8.36"
   }
 }
