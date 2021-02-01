@@ -5,7 +5,7 @@ description: LangSelect介绍
 ---
 ![user](/images/user.jpg)
 ![icon](./marker-icon.png)
-![VuePress Logo](/images/user.jpg)
+
 # LangSelect 语言选择
 
 ## 基础用法
@@ -35,8 +35,6 @@ description: LangSelect介绍
   }
 </script>
 ```
-
-
 
 :::demo
 ```html

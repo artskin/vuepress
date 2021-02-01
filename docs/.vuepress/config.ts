@@ -31,8 +31,6 @@ const config: UserConfig<DefaultThemeOptions> = {
         after:(): string => '</div>\n',
         render: function (tokens, idx) {
           var m = tokens[idx].info.trim().match(/^spoiler\s+(.*)$/);
-          console.log(tokens[idx].info.trim())
-          console.log(tokens[idx])
           if (tokens[idx].nesting === 1) {
             // opening tag
             return '<details><summary>' + md.utils.escapeHtml(m[1]) + '</summary>\n';
@@ -44,6 +42,9 @@ const config: UserConfig<DefaultThemeOptions> = {
         }
       },
     ],
+    // ['@vuepress/vue-container',{
+    //   type: 'demo',
+    // }]
   ],
 }
 
