@@ -1,22 +1,24 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.containerPlugin = void 0;
+exports.vueContainerPlugin = void 0;
 const container = require("markdown-it-container");
 const utils_1 = require("@vuepress/utils");
 const shared_1 = require("@vuepress/shared");
-const containerPlugin = ({ 
+
+const vueContainerPlugin = ({ 
 // plugin options
 type, after, before, locales, 
 // raw options for markdown-it-container
 validate, marker, render, }) => {
+  console.log('vue-demo',type)
     const pluginObj = {
-        name: '@vuepress/plugin-container',
-        multiple: true,
+      name: 'vue-container',
+      multiple: true,
     };
     // `type` option is required
     if (!type) {
-        utils_1.logger.warn(`[${pluginObj.name}] ${utils_1.chalk.magenta('type')} option is required`);
-        return pluginObj;
+      utils_1.logger.warn(`[${pluginObj.name}] ${utils_1.chalk.magenta('type')} option is required`);
+      return pluginObj;
     }
     // if `render` option is not specified
     // use `before` and `after` to generate render function
@@ -24,20 +26,21 @@ validate, marker, render, }) => {
         let renderBefore;
         let renderAfter;
         if (before !== undefined && after !== undefined) {
-            // user defined
-            renderBefore = before;
-            renderAfter = after;
+          // user defined
+          renderBefore = before;
+          renderAfter = after;
         }
         else {
-            // fallback
-            renderBefore = (info) => `<div class="custom-container ${type}">${info ? `<p class="custom-container-title">${info}</p>` : ''}\n`;
-            renderAfter = () => '</div>\n';
+          // fallback
+          renderBefore = (info) => `<div class="custom-container ${type}">${info ? `<p class="custom-container-title">${info}</p>` : ''}\n`;
+          renderAfter = () => '</div>\n';
         }
         // token info stack
         const infoStack = [];
         render = (tokens, index, opts, env) => {
             var _a;
             const token = tokens[index];
+            console.log(token)
             if (token.nesting === 1) {
                 // `before` tag
                 // resolve info (title)
@@ -57,6 +60,7 @@ validate, marker, render, }) => {
                 }
                 // push the info to stack
                 infoStack.push(info);
+                
                 // render
                 return renderBefore(info);
             }
@@ -75,6 +79,6 @@ validate, marker, render, }) => {
     };
     return pluginObj;
 };
-exports.containerPlugin = containerPlugin;
-exports.default = exports.containerPlugin;
+exports.vueContainerPlugin = vueContainerPlugin;
+exports.default = exports.vueContainerPlugin;
 //# sourceMappingURL=index.js.map

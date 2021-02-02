@@ -1,13 +1,9 @@
 # Hello VuePress next
 
-::: spoiler 标题
- code 详情
-:::
-
 ::: demo
 ```vue
 <template>
-  <el-button>{{currentLang}}</el-button>
+  <button>{{currentLang}}</button>
 </template>
 <script>
   export default {
@@ -24,6 +20,7 @@
 ```
 :::
 
+<!-- 
 <RedDiv>_Current count is: {{ count }}_</RedDiv>
 <strong>{{msg}}</strong>
 <button @click="count++">Click Me!</button>
@@ -58,4 +55,4 @@
 .red-div{
   color:#c00
 }
-</style>
+</style> -->
