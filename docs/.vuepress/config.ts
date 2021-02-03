@@ -1,9 +1,9 @@
 import type { UserConfig, DefaultThemeOptions } from 'vuepress'
-const vuedemoPlugin = require('./plugins/vue-demo.js')
+//const vuedemoPlugin = require('./plugins/vue-demo.js')
 
 const vueContainerPlugin = require('./plugins/vue-container/lib/index.js')
-console.log(vueContainerPlugin)
-var md = require('markdown-it')();
+//console.log(vueContainerPlugin)
+//var md = require('markdown-it')();
 const config: UserConfig<DefaultThemeOptions> = {
   lang: 'zh-CN',
   title: 'AIS 组件文档',
@@ -11,6 +11,10 @@ const config: UserConfig<DefaultThemeOptions> = {
 
   themeConfig: {
     logo: 'https://vuejs.org/images/logo.png',
+    navbar:[
+      {text:'组件',link:'/components/'},
+      {text:'Github',link:'https://github.com/vuepress/vuepress-next'}
+    ]
   },
   alias: {
     '@root': '/',
@@ -45,9 +49,10 @@ const config: UserConfig<DefaultThemeOptions> = {
     //     }
     //   },
     // ],
-    [vueContainerPlugin.vueContainerPlugin,{
+    [vueContainerPlugin,{
       type: 'demo',
-    }]
+    }],
+
   ],
 }
 

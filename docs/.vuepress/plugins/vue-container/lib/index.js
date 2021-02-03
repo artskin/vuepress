@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.vueContainerPlugin = void 0;
+//exports.vueContainerPlugin = void 0;
 const container = require("markdown-it-container");
 const utils_1 = require("@vuepress/utils");
 const shared_1 = require("@vuepress/shared");
@@ -23,6 +23,7 @@ validate, marker, render, }) => {
     // if `render` option is not specified
     // use `before` and `after` to generate render function
     if (!render) {
+      
         let renderBefore;
         let renderAfter;
         if (before !== undefined && after !== undefined) {
@@ -37,11 +38,27 @@ validate, marker, render, }) => {
         }
         // token info stack
         const infoStack = [];
-        render = (tokens, index, opts, env) => {
+        
+        render = (tokens, index, opts, env,self) => {
+          
+          //let renderCode = ''
+          //console.log('render执行',index,opts,env,self)
+         
+
+          // if(tokens.tag === 'code'){
+          //   console.log('tokens =',index,tokens)
+          // }
             var _a;
             const token = tokens[index];
-            console.log(token)
             if (token.nesting === 1) {
+              let renderCode = ''
+              const getCode = (item) => item.tag ==='code'
+              if(tokens.find(getCode)){
+                //console.log(tokens.find(getCode))
+                renderCode = tokens.find(getCode).content;
+                //console.log(renderCode)
+              }
+              
                 // `before` tag
                 // resolve info (title)
                 let info = token.info.trim().slice(type.length).trim();
@@ -60,11 +77,12 @@ validate, marker, render, }) => {
                 }
                 // push the info to stack
                 infoStack.push(info);
+                //console.log('render之前插入',info)
                 
                 // render
-                return renderBefore(info);
-            }
-            else {
+                return renderBefore(info+renderCode);
+            } else {
+              //console.log('render之后插入',infoStack)
                 // `after` tag
                 // pop the info from stack
                 const info = infoStack.pop() || '';
@@ -79,6 +97,7 @@ validate, marker, render, }) => {
     };
     return pluginObj;
 };
-exports.vueContainerPlugin = vueContainerPlugin;
-exports.default = exports.vueContainerPlugin;
+//exports.vueContainerPlugin = vueContainerPlugin;
+//exports.default = exports.vueContainerPlugin;
+module.exports = vueContainerPlugin;
 //# sourceMappingURL=index.js.map
