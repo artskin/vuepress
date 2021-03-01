@@ -11,16 +11,16 @@ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 #### 二、添加源后安装
 
-````bash
+```bash
 sudo apt-get install -y nodejs
-```
+``` 
 
 #### 三、检测是否安装成功
 
-````bash
+``` bash
 node -v   
 ==> v14.16.0 √
-```
+``` 
 
 #### 四、安装最新 npm
 
@@ -30,7 +30,8 @@ sudo npm install npm@latest -g
 ```
 
 #### 五、检测npm安装结果
-```bash
+
+``` bash
 sudo npm -v 
 ==>6.14.11
 
