@@ -38,24 +38,27 @@ sudo npm -v
 npm -v 
 err==>: not foundram Files/nodejs/npm: 3: 
       : not foundram Files/nodejs/npm: 5:
+## 出现小插曲
 ```
 
-#### 六、出现小插曲
-```
+#### 六、怎么解决呢，→软链
+```zsh
 which npm   
 // ==>/mnt/d/Program Files/nodejs/npm
 sudo which npm 
 // ==>/usr/local/bin/npm
 
-## 怎么解决呢，→软链
+
 ln -s /mnt/d/Program Files/nodejs/npm /usr/local/bin/npm
 
 ```
 
-#### 七、重启bash
+#### 七、重启bash，检查
 ```
-npm -v  // 6.14.11 √
-sudo npm -v  // 6.14.11 √
+npm -v  
+==> 6.14.11 √
+sudo npm -v  
+==> 6.14.11 √
 ```
 
 大功告成
