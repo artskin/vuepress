@@ -1,6 +1,6 @@
 
 # zsh 插件配置
-
+>  [WSL（适用于 Linux 的 Windows 子系统）](https://docs.microsoft.com/zh-cn/windows/wsl/about)
 
 命令自动提示插件：zsh-autosuggestions
 ```
