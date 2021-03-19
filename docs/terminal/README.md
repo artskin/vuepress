@@ -49,3 +49,22 @@ chmod 777 /home/
 # 777 代表 rwxr-rwx-rwx //(所有用户都可读可写可执行)
 
 ```
+
+git 修改 远程仓库地址
+
+```
+vim .git/config
+或
+git remote set-url origin git@gitlab.sz.sensetime.com:fe/sense-aix.git
+
+git pull origin master --allow-unrelated-histories
+git pull
+//处理merge信息
+git push
+
+# 如果有其他分支
+git checkout dev
+git push origin local_branch:dev
+
+
+```
