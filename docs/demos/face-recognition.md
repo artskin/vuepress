@@ -30,7 +30,7 @@ slug: home
   </div>
 </template>
 <style>
-  .demo-bg{
+  .vuepress-plugin-demo-block__app{
     height:300px;
     background:#090d2c;
     background: #282537;
