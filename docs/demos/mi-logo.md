@@ -15,10 +15,10 @@ slug: home
 ::: demo
 ```html
 <template>
-  <div class="logo"></div>
+  <div class="mi-logo"></div>
 </template>
 <style>
-  .logo{
+  .mi-logo{
     background:#f96400;
     width:66px;
     height:66px;
@@ -54,6 +54,10 @@ slug: home
     width:.3em;
     height:.9em;
     box-shadow: 21px -10.5px 0 0px, 21px 0.2px 0 0px;
+  }
+  .vuepress-plugin-demo-block__app{
+    height:250px;
+    padding:10em;
   }
 </style>
 <script>
