@@ -33,7 +33,7 @@ slug: home
     font-size:18px;
     transform: scale(2.5);
   }
-  .logo:before,.logo:after{
+  .mi-logo:before,.mi-logo:after{
     content:'';
     display:inline-block;
   }
