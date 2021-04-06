@@ -12,6 +12,7 @@ slug: home
 
 ## 各类DEMO实例展示
 
+- 小米Logo → [Demo](/demos/mi-logo.html)
 - 人脸识别 → [Demo](/demos/face-recognition.html)
 - 雷达扫描 → [Demo](/demos/radar.html)
 - 莫比乌斯环 → [Demo](/demos/infinity.html)
