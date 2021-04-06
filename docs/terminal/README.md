@@ -5,6 +5,8 @@
 # 强制更新到远程分支版本
 git fetch --all && git reset --hard origin/v1.0.0 && git pull
 
+# 本地新建分支后 设置远程推送
+git push --set-upstream origin dev
 ```
 
 ## Linux(ubuntu)设置默认shell
