@@ -32,6 +32,7 @@ slug: home
     padding:8px;
     font-size:18px;
     transform: scale(2.5);
+    box-sizing: border-box;
   }
   .mi-logo:before,.mi-logo:after{
     content:'';
