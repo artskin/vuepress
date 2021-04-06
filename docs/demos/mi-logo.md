@@ -37,7 +37,7 @@ slug: home
     content:'';
     display:inline-block;
   }
-  .logo:before{
+  .mi-logo:before{
     transform: translateX(-20%);
     width:0.88em;
     height:0.88em;
@@ -45,7 +45,7 @@ slug: home
     border-radius:0 .3em 0 0;
     box-shadow: 0 .4em #f96400,0 0 0 .3em #fff;
   }
-  .logo:after{
+  .mi-logo:after{
     position:absolute;
     left:45%;
     top:58%;
@@ -57,7 +57,7 @@ slug: home
   }
   .vuepress-plugin-demo-block__app{
     height:250px;
-    padding:10em;
+    display:flex; justify-content:center; align-items:center;
   }
 </style>
 <script>
