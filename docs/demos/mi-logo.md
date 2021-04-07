@@ -61,11 +61,4 @@ slug: home
     display:flex; justify-content:center; align-items:center;
   }
 </style>
-<script>
-export default {
-  data: () => ({ }),
-  mounted(){ },
-  methods:{ }
-}
-</script>
 :::
