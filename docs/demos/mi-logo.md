@@ -61,4 +61,7 @@ slug: home
     display:flex; justify-content:center; align-items:center;
   }
 </style>
+<script>
+export default {}
+</script>
 :::
