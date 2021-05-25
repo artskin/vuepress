@@ -1,4 +1,4 @@
-# VuePress Blog
+# VuePress blog 
 
 This directory is a brief example of a [VuePress](https://vuepress.vuejs.org/) app that can be deployed with ZEIT Now and zero configuration.
 
