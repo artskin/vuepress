@@ -157,6 +157,7 @@ choco install fluent-terminal
 ```
 
 ### ubuntu 安装cmake
+> 以cmake3.20.0为例
 ```bash
 sudo apt-get autoremove cmake   
 
@@ -178,6 +179,6 @@ sudo ln -sf /opt/cmake-3.20.0/bin/*  /usr/bin/
 
 检查是否成功
 cmake --version
-√ cmake version 3.12.2
+√ cmake version 3.20.0
 ```
 
