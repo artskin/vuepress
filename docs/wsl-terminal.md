@@ -155,3 +155,29 @@ choco install fluent-terminal
 192.30.253.112 github.com 
 199.232.5.194 github.global.ssl.fastly.net
 ```
+
+### ubuntu 安装cmake
+```bash
+sudo apt-get autoremove cmake   
+
+# 下载
+wget https://cmake.org/files/v3.20/cmake-3.20.0-linux-x86_64.tar.gz  
+
+# 解压压缩包
+tar zxvf cmake-3.20.0-Linux-x86_64.tar.gz  
+
+sudo apt-get install tree
+# 示例：
+tree -L 2 cmake-3.20.0-linux-x86_64
+
+#移动
+sudo mv cmake-3.20.0-linux-x86_64 /opt/cmake-3.20.0
+
+#软链
+sudo ln -sf /opt/cmake-3.20.0/bin/*  /usr/bin/
+
+检查是否成功
+cmake --version
+√ cmake version 3.12.2
+```
+
