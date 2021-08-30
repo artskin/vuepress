@@ -17,3 +17,6 @@ nginx -s quit //退出 reload|reopen|stop
 #查看端口占用
 netstat -ltunp
 ```
+查看nginx 运行状态
+ps -ef|grep nginx
+
