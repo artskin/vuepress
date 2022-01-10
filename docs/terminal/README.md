@@ -70,3 +70,8 @@ git push origin local_branch:dev
 
 
 ```
+
+```
+# 查看linux的发行版本信息
+cat /etc/os-release
+```
