@@ -8,18 +8,18 @@
     "build": "vuepress build docs"
   },
   "devDependencies": {
-    "@vssue/api-github-v3": "^1.4.7",
-    "@vssue/vuepress-plugin-vssue": "^1.2.2",
-    "typescript": "^4.2.3",
-    "vuepress": "^1.8.2",
-    "vuepress-plugin-demo-block": "^0.7.2",
-    "vuepress-plugin-typescript": "^0.3.1",
-    "vuepress-types": "^0.9.4"
+    "@vssue/api-github-v3": "1.4.7",
+    "@vssue/vuepress-plugin-vssue": "1.2.2",
+    "typescript": "4.2.3",
+    "vuepress": "1.8.2",
+    "vuepress-plugin-demo-block": "0.7.2",
+    "vuepress-plugin-typescript": "0.3.1",
+    "vuepress-types": "0.9.4"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "gitalk": "^1.7.2",
-    "vssue": "^1.4.7",
-    "vuepress-theme-reform": "^1.5.1"
+    "axios": "0.21.1",
+    "gitalk": "1.7.2",
+    "vssue": "1.4.7",
+    "vuepress-theme-reform": "1.5.1"
   }
 }
