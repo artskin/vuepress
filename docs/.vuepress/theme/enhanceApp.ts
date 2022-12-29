@@ -1,8 +1,8 @@
-import { EnhanceApp } from 'vuepress-types'
-import Test from './components/Test.vue'
+// import { EnhanceApp } from 'vuepress-types'
+// import Test from './components/Test.vue'
 
-const enhanceApp: EnhanceApp = ({ Vue }) => {
-  Vue.component('Test', Test)
-}
+// const enhanceApp: EnhanceApp = ({ Vue }) => {
+//   Vue.component('Test', Test)
+// }
 
-export default enhanceApp
+// export default enhanceApp
