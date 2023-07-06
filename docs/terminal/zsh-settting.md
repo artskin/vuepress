@@ -24,7 +24,7 @@ plugins=(
 
 终端目录中主机名替换
 `vi ~/.oh-my-zsh/themes/agnoster.zsh-theme`
-```bash
+```text
 # Context: user@hostname (who am I and where am I)
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
