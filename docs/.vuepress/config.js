@@ -7,6 +7,12 @@ module.exports = {
     ['meta', { name: 'keywords', content: 'web前端技术,前端思考,ECMAS,js,css3,vue' }],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js' }],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js' }],
+    ['script', { src: "https://www.googletagmanager.com/gtag/js?id=G-XHF9GZ09C9",async: true}],
+    ['script', {},
+                " window.dataLayer = window.dataLayer || [];\
+                function gtag(){dataLayer.push(arguments);}\
+                gtag('js', new Date());\
+                gtag('config', 'G-XHF9GZ09C9');"],
   ],
   title: "前端思考",
   description: "前端思考，web前端代码及新技术试验场",
