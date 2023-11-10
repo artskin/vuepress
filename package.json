@@ -17,7 +17,7 @@
     "vuepress-types": "0.9.4"
   },
   "dependencies": {
-    "axios": "0.21.1",
+    "axios": "1.6.0",
     "gitalk": "1.7.2",
     "vssue": "1.4.7",
     "vuepress-theme-reform": "1.5.1"
