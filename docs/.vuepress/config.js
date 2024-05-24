@@ -42,7 +42,7 @@ module.exports = {
       { text: "Notes", link: "/notes/" },
       { text: "Terminal", link: "/terminal/" },
       { text: "Demos", link: "/demos/" },
-      { text: "Editor Online", link: "https://editor.vite.im/" },
+      { text: "Editor Online", link: "https://editor.senseui.com/" },
       //{ text: "标签云", link: "/tags/",tags:true },
       { text: "图博", link: "https://xinyi.tuchong.com/" },
 	    { text: 'Github', link: 'https://github.com/artskin' }
